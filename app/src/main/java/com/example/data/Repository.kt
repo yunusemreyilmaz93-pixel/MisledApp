@@ -69,16 +69,33 @@ class ReadingRepository(
     private val userStatsDao: UserStatsDao,
     private val contentDataSource: ContentDataSource = AssetContentDataSource(context)
 ) {
-    // 1. Static seed passages loaded from assets
-    private val staticPassages: List<Passage> by lazy {
+    // Load full unit model lazily from data source
+    val fullUnit: com.example.data.Unit? by lazy {
         try {
             runBlocking {
-                contentDataSource.getUnit("unit_1_health_medicine")?.passages ?: emptyList()
+                contentDataSource.getUnit("unit_1_health_medicine")
             }
         } catch (e: Exception) {
             e.printStackTrace()
-            emptyList()
+            null
         }
+    }
+
+    // 1. Static seed passages loaded from assets
+    private val staticPassages: List<Passage> by lazy {
+        fullUnit?.passages ?: emptyList()
+    }
+
+    fun getCheckpoints(): List<Checkpoint> {
+        return fullUnit?.checkpoints ?: emptyList()
+    }
+
+    fun getStrategicClosure(): StrategicClosure? {
+        return fullUnit?.strategicClosure
+    }
+
+    fun getTrapMasteryMatrix(): List<TrapMasteryItem> {
+        return fullUnit?.trapMasteryMatrix ?: emptyList()
     }
 
     // 2. Combine static passages with Room progress database

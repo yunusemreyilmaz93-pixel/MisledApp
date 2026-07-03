@@ -566,91 +566,110 @@ fun QuestionBlock(
                         color = Color(0xFF10B981),
                         modifier = Modifier.weight(1f)
                     )
-                    AnalysisBadgeColumn(
-                        label = "PRIMARY DISTRACTOR",
-                        value = question.primaryDistractor,
+                    if (question.analysisProvidedInBook && question.primaryDistractor.isNotEmpty()) {
+                        AnalysisBadgeColumn(
+                            label = "PRIMARY DISTRACTOR",
+                            value = question.primaryDistractor,
+                            color = MaterialTheme.colorScheme.primary,
+                            modifier = Modifier.weight(1f)
+                        )
+                    }
+                }
+
+                if (question.analysisProvidedInBook) {
+                    // Evidence Section
+                    val evidence = remember(question) {
+                        val pattern = "['\"](.*?)['\"]".toRegex()
+                        val matches = pattern.findAll(question.explanation).map { it.groupValues[1] }.toList()
+                        if (matches.isNotEmpty()) matches.joinToString("\n• ", prefix = "• ") else "Refer to the bolded terms in the passage reading card above."
+                    }
+
+                    Text(
+                        text = "EVIDENCE FROM PASSAGE",
+                        fontWeight = FontWeight.Bold,
+                        fontSize = 11.sp,
                         color = MaterialTheme.colorScheme.primary,
-                        modifier = Modifier.weight(1f)
+                        letterSpacing = 0.5.sp
                     )
-                }
+                    Text(
+                        text = evidence,
+                        style = MaterialTheme.typography.bodySmall.copy(fontFamily = FontFamily.Serif),
+                        color = MaterialTheme.colorScheme.primary,
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .background(MaterialTheme.colorScheme.primary.copy(alpha = 0.06f), shape = RoundedCornerShape(4.dp))
+                            .padding(8.dp)
+                            .padding(bottom = 12.dp)
+                    )
 
-                // Evidence Section
-                val evidence = remember(question) {
-                    val pattern = "['\"](.*?)['\"]".toRegex()
-                    val matches = pattern.findAll(question.explanation).map { it.groupValues[1] }.toList()
-                    if (matches.isNotEmpty()) matches.joinToString("\n• ", prefix = "• ") else "Refer to the bolded terms in the passage reading card above."
-                }
+                    Spacer(modifier = Modifier.height(8.dp))
 
-                Text(
-                    text = "EVIDENCE FROM PASSAGE",
-                    fontWeight = FontWeight.Bold,
-                    fontSize = 11.sp,
-                    color = MaterialTheme.colorScheme.primary,
-                    letterSpacing = 0.5.sp
-                )
-                Text(
-                    text = evidence,
-                    style = MaterialTheme.typography.bodySmall.copy(fontFamily = FontFamily.Serif),
-                    color = MaterialTheme.colorScheme.primary,
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .background(MaterialTheme.colorScheme.primary.copy(alpha = 0.06f), shape = RoundedCornerShape(4.dp))
-                        .padding(8.dp)
-                        .padding(bottom = 12.dp)
-                )
+                    // Explanations Card
+                    Text(
+                        text = "STRATEGIC RATIONALE",
+                        fontWeight = FontWeight.Bold,
+                        fontSize = 11.sp,
+                        color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.6f),
+                        letterSpacing = 0.5.sp
+                    )
+                    Text(
+                        text = question.explanation,
+                        style = MaterialTheme.typography.bodySmall,
+                        color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.8f),
+                        modifier = Modifier.padding(top = 2.dp, bottom = 12.dp)
+                    )
 
-                Spacer(modifier = Modifier.height(8.dp))
-
-                // Explanations Card
-                Text(
-                    text = "STRATEGIC RATIONALE",
-                    fontWeight = FontWeight.Bold,
-                    fontSize = 11.sp,
-                    color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.6f),
-                    letterSpacing = 0.5.sp
-                )
-                Text(
-                    text = question.explanation,
-                    style = MaterialTheme.typography.bodySmall,
-                    color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.8f),
-                    modifier = Modifier.padding(top = 2.dp, bottom = 12.dp)
-                )
-
-                // Trap Diagnostics banner
-                Box(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .background(
-                            MaterialTheme.colorScheme.primary.copy(alpha = 0.08f),
-                            shape = RoundedCornerShape(8.dp)
-                        )
-                        .padding(12.dp)
-                ) {
-                    Row(
-                        verticalAlignment = Alignment.Top,
-                        horizontalArrangement = Arrangement.spacedBy(8.dp)
+                    // Trap Diagnostics banner
+                    Box(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .background(
+                                MaterialTheme.colorScheme.primary.copy(alpha = 0.08f),
+                                shape = RoundedCornerShape(8.dp)
+                            )
+                            .padding(12.dp)
                     ) {
-                        Icon(
-                            imageVector = Icons.Default.Warning,
-                            contentDescription = null,
-                            tint = MaterialTheme.colorScheme.primary,
-                            modifier = Modifier.size(16.dp)
-                        )
-                        Column {
-                            Text(
-                                text = "TRAP DETECTED: ${question.trapType}",
-                                fontWeight = FontWeight.Bold,
-                                fontSize = 11.sp,
-                                color = MaterialTheme.colorScheme.primary
+                        Row(
+                            verticalAlignment = Alignment.Top,
+                            horizontalArrangement = Arrangement.spacedBy(8.dp)
+                        ) {
+                            Icon(
+                                imageVector = Icons.Default.Warning,
+                                contentDescription = null,
+                                tint = MaterialTheme.colorScheme.primary,
+                                modifier = Modifier.size(16.dp)
                             )
-                            Text(
-                                text = "Distractor ${question.primaryDistractor} functions as a highly misleading choice. This trap exploits students who skip syntax flow and rely on simple word matches.",
-                                style = MaterialTheme.typography.bodySmall,
-                                color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.8f),
-                                modifier = Modifier.padding(top = 2.dp)
-                            )
+                            Column {
+                                Text(
+                                    text = "TRAP DETECTED: ${question.trapType}",
+                                    fontWeight = FontWeight.Bold,
+                                    fontSize = 11.sp,
+                                    color = MaterialTheme.colorScheme.primary
+                                )
+                                Text(
+                                    text = "Distractor ${question.primaryDistractor} functions as a highly misleading choice. This trap exploits students who skip syntax flow and rely on simple word matches.",
+                                    style = MaterialTheme.typography.bodySmall,
+                                    color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.8f),
+                                    modifier = Modifier.padding(top = 2.dp)
+                                )
+                            }
                         }
                     }
+                } else {
+                    // Show clean source note
+                    Text(
+                        text = "SOURCE NOTE",
+                        fontWeight = FontWeight.Bold,
+                        fontSize = 11.sp,
+                        color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.6f),
+                        letterSpacing = 0.5.sp
+                    )
+                    Text(
+                        text = question.sourceNote ?: "Correct answer was derived from the source passage; the book does not provide a detailed breakdown for this question.",
+                        style = MaterialTheme.typography.bodySmall.copy(fontStyle = androidx.compose.ui.text.font.FontStyle.Italic),
+                        color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.8f),
+                        modifier = Modifier.padding(top = 2.dp, bottom = 12.dp)
+                    )
                 }
             }
         }

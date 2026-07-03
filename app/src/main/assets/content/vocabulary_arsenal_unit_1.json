@@ -1,79 +1,962 @@
 [
   {
-    "word": "ubiquitous",
-    "partOfSpeech": "Adjective",
-    "meaning": "her yerde bulunan",
-    "synonym": "omnipresent, widespread",
-    "example": "The ubiquitous presence of smartphones has changed society."
+    "word": "Emit",
+    "partOfSpeech": "Verb",
+    "meaning": "Yaymak",
+    "synonym": "Release, Give off",
+    "example": "Digital screens emit blue light that mimics natural sunlight, tricking the brain into staying alert.",
+    "initialStatus": "Learning"
   },
   {
-    "word": "somnolence",
+    "word": "Inseparable",
+    "partOfSpeech": "Adjective",
+    "meaning": "Ayrılmaz",
+    "synonym": "Integral",
+    "example": "...an inseparable part of our daily lives.",
+    "initialStatus": "Learning"
+  },
+  {
+    "word": "Suppress",
+    "partOfSpeech": "Verb",
+    "meaning": "Baskılamak",
+    "synonym": "Inhibit, Stop",
+    "example": "...suppresses the production of melatonin...",
+    "initialStatus": "Learning"
+  },
+  {
+    "word": "Essential",
+    "partOfSpeech": "Adjective",
+    "meaning": "Hayati, Gerekli",
+    "synonym": "Crucial, Vital",
+    "example": "...essential for regulating...",
+    "initialStatus": "Learning"
+  },
+  {
+    "word": "Regulate",
+    "partOfSpeech": "Verb",
+    "meaning": "Düzenlemek",
+    "synonym": "Control, Manage",
+    "example": "...regulating our natural sleep-wake cycle.",
+    "initialStatus": "Learning"
+  },
+  {
+    "word": "Culprit",
     "partOfSpeech": "Noun",
-    "meaning": "uykululuk, uykulu hal",
-    "synonym": "sleepiness, drowsiness",
-    "example": "Melatonin is responsible for inducing somnolence."
+    "meaning": "Suçlu, Sebep",
+    "synonym": "Cause, Offender",
+    "example": "The main culprit is...",
+    "initialStatus": "Learning"
   },
   {
-    "word": "emit",
+    "word": "Mimic",
     "partOfSpeech": "Verb",
-    "meaning": "yaymak, sızdırmak",
-    "synonym": "release, give off",
-    "example": "Digital screens emit blue light."
+    "meaning": "Taklit etmek",
+    "synonym": "Imitate, Copy",
+    "example": "...which mimics the high energy...",
+    "initialStatus": "Learning"
   },
   {
-    "word": "deceive",
-    "partOfSpeech": "Verb",
-    "meaning": "aldatmak, kandırmak",
-    "synonym": "mislead, trick",
-    "example": "The brain is effectively deceived into perceiving midnight as midday."
-  },
-  {
-    "word": "suppress",
-    "partOfSpeech": "Verb",
-    "meaning": "baskılamak, bastırmak",
-    "synonym": "inhibit, restrain",
-    "example": "Blue light suppresses the secretion of melatonin."
-  },
-  {
-    "word": "cardiometabolic",
+    "word": "Artificial",
     "partOfSpeech": "Adjective",
-    "meaning": "kalp ve metabolizma ile ilgili",
-    "synonym": "heart-metabolic",
-    "example": "Sugar causes severe cardiometabolic degradation."
+    "meaning": "Yapay",
+    "synonym": "Synthetic, Man-made",
+    "example": "...this artificial light tricks...",
+    "initialStatus": "Learning"
   },
   {
-    "word": "lipogenesis",
+    "word": "Excessive",
+    "partOfSpeech": "Adjective",
+    "meaning": "Aşırı",
+    "synonym": "Extreme, Too much",
+    "example": "...consuming excessive amounts of sugar...",
+    "initialStatus": "Learning"
+  },
+  {
+    "word": "Lead to",
+    "partOfSpeech": "Verb",
+    "meaning": "Yol açmak",
+    "synonym": "Cause, Result in",
+    "example": "...sugar leads to serious health problems.",
+    "initialStatus": "Learning"
+  },
+  {
+    "word": "Invisible",
+    "partOfSpeech": "Adjective",
+    "meaning": "Görünmez",
+    "synonym": "Unseen, Hidden",
+    "example": "This invisible sugar intake...",
+    "initialStatus": "Learning"
+  },
+  {
+    "word": "Link",
     "partOfSpeech": "Noun",
-    "meaning": "yağ oluşumu",
-    "synonym": "fat creation",
-    "example": "Excess fructose triggers hepatic lipogenesis."
+    "meaning": "Bağlantı",
+    "synonym": "Connection",
+    "example": "...link between high sugar consumption...",
+    "initialStatus": "Learning"
   },
   {
-    "word": "exhaust",
+    "word": "Limit",
     "partOfSpeech": "Verb",
-    "meaning": "tüketmek, bitirmek",
-    "synonym": "deplete, drain",
-    "example": "Overproduction of insulin exhausts pancreatic beta-cells."
+    "meaning": "Sınırlandırmak",
+    "synonym": "Restrict, Curb",
+    "example": "...recommends limiting sugar intake...",
+    "initialStatus": "Learning"
   },
   {
-    "word": "robust",
+    "word": "Consumption",
+    "partOfSpeech": "Noun",
+    "meaning": "Tüketim",
+    "synonym": "Intake, Use",
+    "example": "...high sugar consumption...",
+    "initialStatus": "Learning"
+  },
+  {
+    "word": "Irritable",
     "partOfSpeech": "Adjective",
-    "meaning": "güçlü, sağlam",
-    "synonym": "strong, durable",
-    "example": "Brisk walking remains a robust health intervention."
+    "meaning": "Sinirli, Huysuz",
+    "synonym": "Annoyed",
+    "example": "...feeling tired and irritable.",
+    "initialStatus": "Learning"
   },
   {
-    "word": "stimulate",
+    "word": "Recommend",
     "partOfSpeech": "Verb",
-    "meaning": "uyarmak, tetiklemek",
-    "synonym": "arouse, trigger",
-    "example": "Walking stimulates osteoblast activity in bones."
+    "meaning": "Önermek",
+    "synonym": "Suggest, Advise",
+    "example": "...Organization recommends limiting...",
+    "initialStatus": "Learning"
   },
   {
-    "word": "scalable",
+    "word": "Cardiovascular",
     "partOfSpeech": "Adjective",
-    "meaning": "ölçeklenebilir, genişletilebilir",
-    "synonym": "adaptable, expandable",
-    "example": "Walking is a highly scalable health modality."
+    "meaning": "Kalp-damar sistemiyle ilgili",
+    "synonym": "Heart-related",
+    "example": "...reduce the risk of serious cardiovascular issues...",
+    "initialStatus": "Learning"
+  },
+  {
+    "word": "Strengthen",
+    "partOfSpeech": "Verb",
+    "meaning": "Güçlendirmek",
+    "synonym": "Fortify",
+    "example": "...strengthens leg muscles...",
+    "initialStatus": "Learning"
+  },
+  {
+    "word": "Boost",
+    "partOfSpeech": "Verb",
+    "meaning": "Artırmak",
+    "synonym": "Enhance, Improve",
+    "example": "...boost mood effectively.",
+    "initialStatus": "Learning"
+  },
+  {
+    "word": "Incorporate",
+    "partOfSpeech": "Verb",
+    "meaning": "Dahil etmek",
+    "synonym": "Include",
+    "example": "...incorporating a short...",
+    "initialStatus": "Learning"
+  },
+  {
+    "word": "Effective",
+    "partOfSpeech": "Adjective",
+    "meaning": "Etkili",
+    "synonym": "Efficient, Useful",
+    "example": "...most effective ways...",
+    "initialStatus": "Learning"
+  },
+  {
+    "word": "Maintain",
+    "partOfSpeech": "Verb",
+    "meaning": "Sürdürmek, Korumak",
+    "synonym": "Sustain, Keep",
+    "example": "...maintain a healthy weight...",
+    "initialStatus": "Learning"
+  },
+  {
+    "word": "Prescribe",
+    "partOfSpeech": "Verb",
+    "meaning": "Reçete etmek",
+    "synonym": "Order (medically)",
+    "example": "...doctors now prescribe...",
+    "initialStatus": "Learning"
+  },
+  {
+    "word": "Sedentary",
+    "partOfSpeech": "Adjective",
+    "meaning": "Hareketsiz, oturarak geçen",
+    "synonym": "Inactive",
+    "example": "...particularly for sedentary office workers.",
+    "initialStatus": "Learning"
+  },
+  {
+    "word": "Interchangeably",
+    "partOfSpeech": "Adverb",
+    "meaning": "Birbiri yerine",
+    "synonym": "Exchangeably",
+    "example": "...use terms interchangeably...",
+    "initialStatus": "Learning"
+  },
+  {
+    "word": "Beneficial",
+    "partOfSpeech": "Adjective",
+    "meaning": "Yararlı",
+    "synonym": "Helpful",
+    "example": "...harmless or even beneficial...",
+    "initialStatus": "Learning"
+  },
+  {
+    "word": "Multiply",
+    "partOfSpeech": "Verb",
+    "meaning": "Çoğalmak",
+    "synonym": "Reproduce",
+    "example": "...living host... to multiply.",
+    "initialStatus": "Learning"
+  },
+  {
+    "word": "Host",
+    "partOfSpeech": "Noun",
+    "meaning": "Konak",
+    "synonym": "Carrier organism",
+    "example": "...require a living host...",
+    "initialStatus": "Learning"
+  },
+  {
+    "word": "Resistance",
+    "partOfSpeech": "Noun",
+    "meaning": "Direnç",
+    "synonym": "Immunity",
+    "example": "...problem of drug resistance.",
+    "initialStatus": "Learning"
+  },
+  {
+    "word": "Survive",
+    "partOfSpeech": "Verb",
+    "meaning": "Hayatta kalmak",
+    "synonym": "Exist, Live",
+    "example": "...can survive in various...",
+    "initialStatus": "Learning"
+  },
+  {
+    "word": "Aid",
+    "partOfSpeech": "Verb",
+    "meaning": "Yardım etmek",
+    "synonym": "Help, Assist",
+    "example": "...aiding humans in digestion.",
+    "initialStatus": "Learning"
+  },
+  {
+    "word": "Contribute to",
+    "partOfSpeech": "Verb",
+    "meaning": "Katkıda bulunmak",
+    "synonym": "Add to, Cause",
+    "example": "...mistake that contributes to...",
+    "initialStatus": "Learning"
+  },
+  {
+    "word": "Crucial",
+    "partOfSpeech": "Adjective",
+    "meaning": "Çok önemli",
+    "synonym": "Vital, Essential",
+    "example": "...staying hydrated is crucial...",
+    "initialStatus": "Learning"
+  },
+  {
+    "word": "Evidence",
+    "partOfSpeech": "Noun",
+    "meaning": "Kanıt",
+    "synonym": "Proof",
+    "example": "...lacks strong scientific evidence.",
+    "initialStatus": "Learning"
+  },
+  {
+    "word": "Intake",
+    "partOfSpeech": "Noun",
+    "meaning": "Alım, Miktar",
+    "synonym": "Consumption",
+    "example": "...daily fluid intake.",
+    "initialStatus": "Learning"
+  },
+  {
+    "word": "Indicator",
+    "partOfSpeech": "Noun",
+    "meaning": "Gösterge",
+    "synonym": "Sign, Signal",
+    "example": "The best indicator of hydration...",
+    "initialStatus": "Learning"
+  },
+  {
+    "word": "Excessive",
+    "partOfSpeech": "Adjective",
+    "meaning": "Aşırı",
+    "synonym": "Extreme",
+    "example": "...drink excessive amounts...",
+    "initialStatus": "Learning"
+  },
+  {
+    "word": "Factor",
+    "partOfSpeech": "Noun",
+    "meaning": "Etken, Faktör",
+    "synonym": "Element",
+    "example": "...depends on various factors...",
+    "initialStatus": "Learning"
+  },
+  {
+    "word": "Beverage",
+    "partOfSpeech": "Noun",
+    "meaning": "İçecek",
+    "synonym": "Drink",
+    "example": "...beverages like coffee...",
+    "initialStatus": "Learning"
+  },
+  {
+    "word": "Force",
+    "partOfSpeech": "Verb",
+    "meaning": "Zorlamak",
+    "synonym": "Compel",
+    "example": "Forcing yourself to drink...",
+    "initialStatus": "Learning"
+  },
+  {
+    "word": "Persist",
+    "partOfSpeech": "Verb",
+    "meaning": "Devam etmek, İnatla sürmek",
+    "synonym": "Continue, Endure",
+    "example": "...infections persist...",
+    "initialStatus": "Learning"
+  },
+  {
+    "word": "Ineffective",
+    "partOfSpeech": "Adjective",
+    "meaning": "Etkisiz",
+    "synonym": "Useless, Futile",
+    "example": "...treatments become ineffective.",
+    "initialStatus": "Learning"
+  },
+  {
+    "word": "Prescription",
+    "partOfSpeech": "Noun",
+    "meaning": "Reçete",
+    "synonym": "Medical order",
+    "example": "...unnecessary prescription of...",
+    "initialStatus": "Learning"
+  },
+  {
+    "word": "Livestock",
+    "partOfSpeech": "Noun",
+    "meaning": "Çiftlik hayvanları",
+    "synonym": "Farm animals",
+    "example": "...antibiotics in livestock farming...",
+    "initialStatus": "Learning"
+  },
+  {
+    "word": "Emergence",
+    "partOfSpeech": "Noun",
+    "meaning": "Ortaya çıkış",
+    "synonym": "Appearance, Rise",
+    "example": "...emergence of resistant bacteria...",
+    "initialStatus": "Learning"
+  },
+  {
+    "word": "Manageable",
+    "partOfSpeech": "Adjective",
+    "meaning": "Yönetilebilir",
+    "synonym": "Controllable",
+    "example": "...manageable conditions.",
+    "initialStatus": "Learning"
+  },
+  {
+    "word": "Evolve",
+    "partOfSpeech": "Verb",
+    "meaning": "Evrimleşmek",
+    "synonym": "Develop, Adapt",
+    "example": "...bacteria evolve and develop...",
+    "initialStatus": "Learning"
+  },
+  {
+    "word": "Transmit",
+    "partOfSpeech": "Verb",
+    "meaning": "Bulaştırmak, İletmek",
+    "synonym": "Spread, Pass on",
+    "example": "...be transmitted to humans...",
+    "initialStatus": "Learning"
+  },
+  {
+    "word": "Phenomenon",
+    "partOfSpeech": "Noun",
+    "meaning": "Olgu",
+    "synonym": "Occurrence, Event",
+    "example": "...fascinating medical phenomenon...",
+    "initialStatus": "Learning"
+  },
+  {
+    "word": "Alleviate",
+    "partOfSpeech": "Verb",
+    "meaning": "Hafifletmek",
+    "synonym": "Ease, Relieve",
+    "example": "...effectively alleviate subjective symptoms...",
+    "initialStatus": "Learning"
+  },
+  {
+    "word": "Underlying",
+    "partOfSpeech": "Adjective",
+    "meaning": "Altta yatan, Esas",
+    "synonym": "Root, Fundamental",
+    "example": "...underlying cause of a disease...",
+    "initialStatus": "Learning"
+  },
+  {
+    "word": "Expectation",
+    "partOfSpeech": "Noun",
+    "meaning": "Beklenti",
+    "synonym": "Anticipation",
+    "example": "...through expectation.",
+    "initialStatus": "Learning"
+  },
+  {
+    "word": "Influence",
+    "partOfSpeech": "Verb",
+    "meaning": "Etkilemek",
+    "synonym": "Affect, Impact",
+    "example": "...ability to influence physical health...",
+    "initialStatus": "Learning"
+  },
+  {
+    "word": "Condition",
+    "partOfSpeech": "Noun",
+    "meaning": "Durum, Rahatsızlık",
+    "synonym": "State, Illness",
+    "example": "...patient's condition improves...",
+    "initialStatus": "Learning"
+  },
+  {
+    "word": "Trial",
+    "partOfSpeech": "Noun",
+    "meaning": "Deneme, Test",
+    "synonym": "Test, Experiment",
+    "example": "In clinical trials...",
+    "initialStatus": "Learning"
+  },
+  {
+    "word": "Release",
+    "partOfSpeech": "Verb",
+    "meaning": "Salgılamak",
+    "synonym": "Secrete",
+    "example": "...brain may release natural painkillers...",
+    "initialStatus": "Learning"
+  },
+  {
+    "word": "Broader",
+    "partOfSpeech": "Adjective",
+    "meaning": "Daha geniş",
+    "synonym": "Wider",
+    "example": "...serve a broader purpose...",
+    "initialStatus": "Learning"
+  },
+  {
+    "word": "Shield",
+    "partOfSpeech": "Noun",
+    "meaning": "Kalkan",
+    "synonym": "Protection, Barrier",
+    "example": "...creates a biological shield...",
+    "initialStatus": "Learning"
+  },
+  {
+    "word": "Contagious",
+    "partOfSpeech": "Adjective",
+    "meaning": "Bulaşıcı",
+    "synonym": "Infectious",
+    "example": "...highly contagious diseases...",
+    "initialStatus": "Learning"
+  },
+  {
+    "word": "Threshold",
+    "partOfSpeech": "Noun",
+    "meaning": "Eşik, Sınır",
+    "synonym": "Limit, Level",
+    "example": "...specific threshold...",
+    "initialStatus": "Learning"
+  },
+  {
+    "word": "Outbreak",
+    "partOfSpeech": "Noun",
+    "meaning": "Salgın, Patlak verme",
+    "synonym": "Epidemic",
+    "example": "...outbreaks can return...",
+    "initialStatus": "Learning"
+  },
+  {
+    "word": "Infect",
+    "partOfSpeech": "Verb",
+    "meaning": "Enfekte etmek",
+    "synonym": "Contaminate",
+    "example": "...has fewer people to infect...",
+    "initialStatus": "Learning"
+  },
+  {
+    "word": "Vulnerable",
+    "partOfSpeech": "Adjective",
+    "meaning": "Savunmasız",
+    "synonym": "Susceptible",
+    "example": "...safety of the most vulnerable.",
+    "initialStatus": "Learning"
+  },
+  {
+    "word": "Endanger",
+    "partOfSpeech": "Verb",
+    "meaning": "Tehlikeye atmak",
+    "synonym": "Threaten",
+    "example": "...endangering the entire community.",
+    "initialStatus": "Learning"
+  },
+  {
+    "word": "Attribute to",
+    "partOfSpeech": "Verb",
+    "meaning": "-e dayandırmak, Atfetmek",
+    "synonym": "Ascribe to",
+    "example": "...attributed to character flaws...",
+    "initialStatus": "Learning"
+  },
+  {
+    "word": "Imbalance",
+    "partOfSpeech": "Noun",
+    "meaning": "Dengesizlik",
+    "synonym": "Disproportion",
+    "example": "...chemical imbalances...",
+    "initialStatus": "Learning"
+  },
+  {
+    "word": "Stigma",
+    "partOfSpeech": "Noun",
+    "meaning": "Damgalanma, Leke",
+    "synonym": "Disgrace, Shame",
+    "example": "...harmful 'stigma' remains...",
+    "initialStatus": "Learning"
+  },
+  {
+    "word": "Ailment",
+    "partOfSpeech": "Noun",
+    "meaning": "Rahatsızlık",
+    "synonym": "Illness, Disorder",
+    "example": "...physical ailments like diabetes...",
+    "initialStatus": "Learning"
+  },
+  {
+    "word": "Urgency",
+    "partOfSpeech": "Noun",
+    "meaning": "Aciliyet",
+    "synonym": "Importance",
+    "example": "...treat it with the same urgency...",
+    "initialStatus": "Learning"
+  },
+  {
+    "word": "Misunderstood",
+    "partOfSpeech": "Adjective",
+    "meaning": "Yanlış anlaşılmış",
+    "synonym": "Misinterpreted",
+    "example": "...disorders were often misunderstood...",
+    "initialStatus": "Learning"
+  },
+  {
+    "word": "Predisposition",
+    "partOfSpeech": "Noun",
+    "meaning": "Yatkınlık",
+    "synonym": "Tendency",
+    "example": "...genetic predispositions.",
+    "initialStatus": "Learning"
+  },
+  {
+    "word": "Normalize",
+    "partOfSpeech": "Verb",
+    "meaning": "Normalleştirmek",
+    "synonym": "Standardize",
+    "example": "...aim to normalize mental health care.",
+    "initialStatus": "Learning"
+  },
+  {
+    "word": "Remotely",
+    "partOfSpeech": "Adverb",
+    "meaning": "Uzaktan",
+    "synonym": "From a distance",
+    "example": "...caring for patients remotely...",
+    "initialStatus": "Learning"
+  },
+  {
+    "word": "Convenience",
+    "partOfSpeech": "Noun",
+    "meaning": "Kolaylık, Rahatlık",
+    "synonym": "Ease",
+    "example": "...offers undeniable convenience...",
+    "initialStatus": "Learning"
+  },
+  {
+    "word": "Subtle",
+    "partOfSpeech": "Adjective",
+    "meaning": "Hafif, İnce",
+    "synonym": "Faint",
+    "example": "...miss subtle signs of illness...",
+    "initialStatus": "Learning"
+  },
+  {
+    "word": "Divide",
+    "partOfSpeech": "Noun",
+    "meaning": "Uçurum, Ayrım",
+    "synonym": "Gap, Split",
+    "example": "...technological divide...",
+    "initialStatus": "Learning"
+  },
+  {
+    "word": "Hybrid",
+    "partOfSpeech": "Adjective",
+    "meaning": "Melez, Karma",
+    "synonym": "Mixed, Composite",
+    "example": "...a hybrid model combining...",
+    "initialStatus": "Learning"
+  },
+  {
+    "word": "Consult",
+    "partOfSpeech": "Verb",
+    "meaning": "Danışmak",
+    "synonym": "Seek advice",
+    "example": "...patients can consult doctors...",
+    "initialStatus": "Learning"
+  },
+  {
+    "word": "Detect",
+    "partOfSpeech": "Verb",
+    "meaning": "Tespit etmek",
+    "synonym": "Identify, Spot",
+    "example": "...could only be detected in person.",
+    "initialStatus": "Learning"
+  },
+  {
+    "word": "Lack",
+    "partOfSpeech": "Verb",
+    "meaning": "Yoksun olmak",
+    "synonym": "Be without",
+    "example": "...may lack the necessary devices...",
+    "initialStatus": "Learning"
+  },
+  {
+    "word": "Unprecedented",
+    "partOfSpeech": "Adjective",
+    "meaning": "Eşi görülmemiş",
+    "synonym": "Unparalleled",
+    "example": "...unprecedented ability...",
+    "initialStatus": "Learning"
+  },
+  {
+    "word": "Eradicate",
+    "partOfSpeech": "Verb",
+    "meaning": "Kökünü kazımak",
+    "synonym": "Eliminate, Wipe out",
+    "example": "...eradicating hereditary diseases...",
+    "initialStatus": "Learning"
+  },
+  {
+    "word": "Specter",
+    "partOfSpeech": "Noun",
+    "meaning": "Heyula, Korku",
+    "synonym": "Ghost, Threat",
+    "example": "...raises the specter of...",
+    "initialStatus": "Learning"
+  },
+  {
+    "word": "Exacerbate",
+    "partOfSpeech": "Verb",
+    "meaning": "Kötüleştirmek",
+    "synonym": "Aggravate, Worsen",
+    "example": "...exacerbating social inequality.",
+    "initialStatus": "Learning"
+  },
+  {
+    "word": "Irreversible",
+    "partOfSpeech": "Adjective",
+    "meaning": "Geri döndürülemez",
+    "synonym": "Permanent",
+    "example": "...may be irreversible.",
+    "initialStatus": "Learning"
+  },
+  {
+    "word": "Precision",
+    "partOfSpeech": "Noun",
+    "meaning": "Hassasiyet",
+    "synonym": "Accuracy",
+    "example": "...surgical precision.",
+    "initialStatus": "Learning"
+  },
+  {
+    "word": "Hereditary",
+    "partOfSpeech": "Adjective",
+    "meaning": "Kalıtsal",
+    "synonym": "Genetic, Inherited",
+    "example": "...hereditary diseases...",
+    "initialStatus": "Learning"
+  },
+  {
+    "word": "Alter",
+    "partOfSpeech": "Verb",
+    "meaning": "Değiştirmek",
+    "synonym": "Change, Modify",
+    "example": "...altering genes in embryos...",
+    "initialStatus": "Learning"
+  },
+  {
+    "word": "Falter",
+    "partOfSpeech": "Verb",
+    "meaning": "İşe yaramamak, Sendelemek",
+    "synonym": "Fail, Waver",
+    "example": "...this strategy falters when...",
+    "initialStatus": "Learning"
+  },
+  {
+    "word": "Pathogen",
+    "partOfSpeech": "Noun",
+    "meaning": "Hastalık yapıcı, Mikrop",
+    "synonym": "Germ, Virus",
+    "example": "...when a pathogen allows...",
+    "initialStatus": "Learning"
+  },
+  {
+    "word": "Stealth",
+    "partOfSpeech": "Noun",
+    "meaning": "Gizlilik",
+    "synonym": "Secrecy",
+    "example": "...biological stealth mechanism...",
+    "initialStatus": "Learning"
+  },
+  {
+    "word": "Necessitate",
+    "partOfSpeech": "Verb",
+    "meaning": "Gerektirmek",
+    "synonym": "Require, Demand",
+    "example": "...necessitating broad measures...",
+    "initialStatus": "Learning"
+  },
+  {
+    "word": "Elusive",
+    "partOfSpeech": "Adjective",
+    "meaning": "Ele geçmez, Gizemli",
+    "synonym": "Evasive, Tricky",
+    "example": "...such elusive adversaries.",
+    "initialStatus": "Learning"
+  },
+  {
+    "word": "Rely on",
+    "partOfSpeech": "Verb",
+    "meaning": "Güvenmek, Dayanmak",
+    "synonym": "Depend on",
+    "example": "...relies heavily on identifying...",
+    "initialStatus": "Learning"
+  },
+  {
+    "word": "Distinguish",
+    "partOfSpeech": "Verb",
+    "meaning": "Ayırt etmek",
+    "synonym": "Differentiate",
+    "example": "...distinguishing it from...",
+    "initialStatus": "Learning"
+  },
+  {
+    "word": "Severe",
+    "partOfSpeech": "Adjective",
+    "meaning": "Şiddetli, Ciddi",
+    "synonym": "Serious, Acute",
+    "example": "...after severe symptoms appeared.",
+    "initialStatus": "Learning"
+  },
+  {
+    "word": "Rigid",
+    "partOfSpeech": "Adjective",
+    "meaning": "Sert, Değişmez",
+    "synonym": "Inflexible, Stiff",
+    "example": "...rigid, fixed organ...",
+    "initialStatus": "Learning"
+  },
+  {
+    "word": "Shatter",
+    "partOfSpeech": "Verb",
+    "meaning": "Parçalamak, Yok etmek",
+    "synonym": "Destroy, Break",
+    "example": "...view has been shattered...",
+    "initialStatus": "Learning"
+  },
+  {
+    "word": "Compensate",
+    "partOfSpeech": "Verb",
+    "meaning": "Telafi etmek",
+    "synonym": "Make up for",
+    "example": "...compensate for injury...",
+    "initialStatus": "Learning"
+  },
+  {
+    "word": "Static",
+    "partOfSpeech": "Adjective",
+    "meaning": "Durağan",
+    "synonym": "Stationary, Unchanging",
+    "example": "...not a static machine...",
+    "initialStatus": "Learning"
+  },
+  {
+    "word": "Dynamic",
+    "partOfSpeech": "Adjective",
+    "meaning": "Dinamik, Değişken",
+    "synonym": "Active, Changing",
+    "example": "...a dynamic ecosystem...",
+    "initialStatus": "Learning"
+  },
+  {
+    "word": "Generate",
+    "partOfSpeech": "Verb",
+    "meaning": "Üretmek, Oluşturmak",
+    "synonym": "Create, Produce",
+    "example": "...generate new cells...",
+    "initialStatus": "Learning"
+  },
+  {
+    "word": "Adaptability",
+    "partOfSpeech": "Noun",
+    "meaning": "Uyumluluk",
+    "synonym": "Flexibility",
+    "example": "This adaptability allows...",
+    "initialStatus": "Learning"
+  },
+  {
+    "word": "Adjust",
+    "partOfSpeech": "Verb",
+    "meaning": "Ayarlamak, Uyum sağlamak",
+    "synonym": "Modify, Adapt",
+    "example": "...adjust their activities...",
+    "initialStatus": "Learning"
+  },
+  {
+    "word": "Inaccessible",
+    "partOfSpeech": "Adjective",
+    "meaning": "Erişilemez",
+    "synonym": "Unreachable",
+    "example": "...remain inaccessible...",
+    "initialStatus": "Learning"
+  },
+  {
+    "word": "Affluent",
+    "partOfSpeech": "Adjective",
+    "meaning": "Zengin, Varlıklı",
+    "synonym": "Wealthy, Rich",
+    "example": "...affluent ones...",
+    "initialStatus": "Learning"
+  },
+  {
+    "word": "Disparity",
+    "partOfSpeech": "Noun",
+    "meaning": "Eşitsizlik",
+    "synonym": "Inequality, Gap",
+    "example": "...this disparity is driven by...",
+    "initialStatus": "Learning"
+  },
+  {
+    "word": "Accumulate",
+    "partOfSpeech": "Verb",
+    "meaning": "Birikmek",
+    "synonym": "Gather, Build up",
+    "example": "...factors that accumulate...",
+    "initialStatus": "Learning"
+  },
+  {
+    "word": "Dictate",
+    "partOfSpeech": "Verb",
+    "meaning": "Dikte etmek, Belirlemek",
+    "synonym": "Determine, Control",
+    "example": "...structures that dictate...",
+    "initialStatus": "Learning"
+  },
+  {
+    "word": "Systemic",
+    "partOfSpeech": "Adjective",
+    "meaning": "Sistemsel",
+    "synonym": "Structural",
+    "example": "...a systemic issue...",
+    "initialStatus": "Learning"
+  },
+  {
+    "word": "Nutritious",
+    "partOfSpeech": "Adjective",
+    "meaning": "Besleyici",
+    "synonym": "Healthy, Nourishing",
+    "example": "...nutritious food...",
+    "initialStatus": "Learning"
+  },
+  {
+    "word": "Exposure",
+    "partOfSpeech": "Noun",
+    "meaning": "Maruz kalma",
+    "synonym": "Contact",
+    "example": "...exposure to environmental pollutants...",
+    "initialStatus": "Learning"
+  },
+  {
+    "word": "Inevitable",
+    "partOfSpeech": "Adjective",
+    "meaning": "Kaçınılmaz",
+    "synonym": "Unavoidable",
+    "example": "...inevitable biological process...",
+    "initialStatus": "Learning"
+  },
+  {
+    "word": "Reframe",
+    "partOfSpeech": "Verb",
+    "meaning": "Yeniden çerçevelemek",
+    "synonym": "Redefine",
+    "example": "...reframing it as a treatable condition.",
+    "initialStatus": "Learning"
+  },
+  {
+    "word": "Enticing",
+    "partOfSpeech": "Adjective",
+    "meaning": "Cazip, Çekici",
+    "synonym": "Attractive, Tempting",
+    "example": "...prospect... is enticing...",
+    "initialStatus": "Learning"
+  },
+  {
+    "word": "Prolonged",
+    "partOfSpeech": "Adjective",
+    "meaning": "Uzamış",
+    "synonym": "Extended",
+    "example": "...prolonged period of frailty?",
+    "initialStatus": "Learning"
+  },
+  {
+    "word": "Frailty",
+    "partOfSpeech": "Noun",
+    "meaning": "Cılızlık, Düşkünlük",
+    "synonym": "Weakness",
+    "example": "...period of frailty?",
+    "initialStatus": "Learning"
+  },
+  {
+    "word": "Delay",
+    "partOfSpeech": "Verb",
+    "meaning": "Geciktirmek",
+    "synonym": "Postpone",
+    "example": "...could delay cellular aging.",
+    "initialStatus": "Learning"
+  },
+  {
+    "word": "Eliminate",
+    "partOfSpeech": "Verb",
+    "meaning": "Yok etmek",
+    "synonym": "Remove",
+    "example": "...eliminate 'zombie cells'...",
+    "initialStatus": "Learning"
+  },
+  {
+    "word": "Inflammation",
+    "partOfSpeech": "Noun",
+    "meaning": "İltihap",
+    "synonym": "Swelling",
+    "example": "...causing inflammation in surrounding tissue.",
+    "initialStatus": "Learning"
   }
 ]

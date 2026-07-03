@@ -6,7 +6,18 @@ data class Unit(
     val id: String,
     val title: String,
     val description: String,
-    val passages: List<Passage>
+    val source: Source? = null,
+    val passages: List<Passage>,
+    val checkpoints: List<Checkpoint>? = null,
+    val strategicClosure: StrategicClosure? = null,
+    val trapMasteryMatrix: List<TrapMasteryItem>? = null,
+    val vocabularyArsenal: List<VocabularyItem>? = null
+)
+
+data class Source(
+    val bookTitle: String,
+    val unit: String,
+    val extractionNote: String
 )
 
 data class Passage(
@@ -34,7 +45,9 @@ data class Question(
     val primaryDistractor: String, // "A", "B", "C", "D", "E"
     val explanation: String,
     val trapType: String,
-    val evidenceSentence: String
+    val evidenceSentence: String,
+    val analysisProvidedInBook: Boolean = false,
+    val sourceNote: String? = null
 )
 
 data class Option(
@@ -75,11 +88,23 @@ data class Checkpoint(
     val id: String,
     val title: String,
     val requiredPassageIds: List<String>,
-    val description: String
+    val description: String,
+    val trapTypes: List<String> = emptyList(),
+    val vocabularyInventory: List<String> = emptyList()
 )
 
 data class StrategicClosure(
-    val graduationTitle: String,
-    val totalRequirementsMet: Boolean,
-    val finalReflection: String
+    val title: String,
+    val sections: List<String> = emptyList(),
+    val goldenRule: String = "",
+    val nemesisTraps: List<String> = emptyList()
 )
+
+data class TrapMasteryItem(
+    val trap: String,
+    val passageId: String,
+    val questionNumber: Int,
+    val howItAppeared: String,
+    val howToAvoid: String
+)
+

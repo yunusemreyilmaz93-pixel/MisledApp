@@ -21,6 +21,11 @@ import androidx.compose.ui.unit.sp
 import com.example.data.PassageWithProgress
 import com.example.ui.MainViewModel
 
+import androidx.compose.ui.text.font.FontStyle
+import com.example.data.Checkpoint
+import com.example.data.StrategicClosure
+import com.example.data.TrapMasteryItem
+
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun CheckpointScreen(
@@ -33,11 +38,19 @@ fun CheckpointScreen(
     
     var reflectionNote by remember { mutableStateOf("") }
     
+    val checkpoint = remember { viewModel.getCheckpoints().find { it.id == checkpointId } }
+    
     // Filter passages belonging to this specific checkpoint
-    val targetPassages = when (checkpointId) {
-        "checkpoint1" -> passages.take(5)
-        "checkpoint2" -> passages.drop(5).take(5)
-        else -> passages // closure uses all 15
+    val targetPassages = remember(passages, checkpoint) {
+        if (checkpoint != null) {
+            passages.filter { it.passage.id.lowercase() in checkpoint.requiredPassageIds.map { id -> id.lowercase() } }
+        } else {
+            when (checkpointId) {
+                "checkpoint1" -> passages.take(5)
+                "checkpoint2" -> passages.drop(5).take(5)
+                else -> passages
+            }
+        }
     }
 
     Scaffold(
@@ -45,7 +58,7 @@ fun CheckpointScreen(
             TopAppBar(
                 title = {
                     Text(
-                        text = when (checkpointId) {
+                        text = checkpoint?.title ?: when (checkpointId) {
                             "checkpoint1" -> "Foundation Checkpoint"
                             "checkpoint2" -> "Intermediate Checkpoint"
                             else -> "STRATEGIC CLOSURE"
@@ -80,16 +93,20 @@ fun CheckpointScreen(
                     passages = passages,
                     analytics = analytics,
                     reflectionNote = reflectionNote,
-                    onNoteChange = { reflectionNote = it }
+                    onNoteChange = { reflectionNote = it },
+                    strategicClosure = remember { viewModel.getStrategicClosure() },
+                    trapMasteryMatrix = remember { viewModel.getTrapMasteryMatrix() }
                 )
             } else {
                 // Standard Checkpoint 1 & 2 view
                 CheckpointView(
-                    checkpointTitle = if (checkpointId == "checkpoint1") "Checkpoint #1" else "Checkpoint #2",
+                    checkpointTitle = checkpoint?.title ?: (if (checkpointId == "checkpoint1") "Checkpoint #1" else "Checkpoint #2"),
+                    checkpointDescription = checkpoint?.description ?: "5 passages reviewed: mark hits/misses, identify trap patterns, and check vocabulary mastery.",
                     targetPassages = targetPassages,
                     analytics = analytics,
                     reflectionNote = reflectionNote,
-                    onNoteChange = { reflectionNote = it }
+                    onNoteChange = { reflectionNote = it },
+                    checkpoint = checkpoint
                 )
             }
 
@@ -101,11 +118,21 @@ fun CheckpointScreen(
 @Composable
 fun CheckpointView(
     checkpointTitle: String,
+    checkpointDescription: String,
     targetPassages: List<PassageWithProgress>,
     analytics: com.example.data.ReadingAnalytics,
     reflectionNote: String,
-    onNoteChange: (String) -> Unit
+    onNoteChange: (String) -> Unit,
+    checkpoint: Checkpoint?
 ) {
+    // Description text
+    Text(
+        text = checkpointDescription,
+        style = MaterialTheme.typography.bodyMedium,
+        color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.7f),
+        modifier = Modifier.padding(bottom = 8.dp)
+    )
+
     // 1. Deception Log
     Text(
         text = "DECEPTION LOG",
@@ -129,7 +156,7 @@ fun CheckpointView(
                     horizontalArrangement = Arrangement.SpaceBetween,
                     verticalAlignment = Alignment.CenterVertically
                 ) {
-                    Column {
+                    Column(modifier = Modifier.weight(1f)) {
                         Text(
                             text = p.passage.title,
                             fontWeight = FontWeight.Bold,
@@ -137,25 +164,25 @@ fun CheckpointView(
                             fontFamily = FontFamily.Serif
                         )
                         Text(
-                            text = "Score: ${p.score}/3 Questions Correct",
+                            text = if (p.isCompleted) "Score: ${p.score}/3 Questions Correct" else "Not attempted yet",
                             fontSize = 11.sp,
-                            color = if (p.score == 3) Color(0xFF10B981) else MaterialTheme.colorScheme.primary
+                            color = if (!p.isCompleted) MaterialTheme.colorScheme.onSurface.copy(alpha = 0.4f) else if (p.score == 3) Color(0xFF10B981) else MaterialTheme.colorScheme.primary
                         )
                     }
 
                     Box(
                         modifier = Modifier
                             .background(
-                                if (p.score == 3) Color(0xFF10B981).copy(alpha = 0.15f) else MaterialTheme.colorScheme.primary.copy(alpha = 0.15f),
+                                if (!p.isCompleted) MaterialTheme.colorScheme.onSurface.copy(alpha = 0.08f) else if (p.score == 3) Color(0xFF10B981).copy(alpha = 0.15f) else MaterialTheme.colorScheme.primary.copy(alpha = 0.15f),
                                 shape = RoundedCornerShape(4.dp)
                             )
                             .padding(horizontal = 8.dp, vertical = 4.dp)
                     ) {
                         Text(
-                            text = if (p.score == 3) "Flawless" else "Dissected",
+                            text = if (!p.isCompleted) "Pending" else if (p.score == 3) "Flawless" else "Dissected",
                             fontSize = 9.sp,
                             fontWeight = FontWeight.Bold,
-                            color = if (p.score == 3) Color(0xFF10B981) else MaterialTheme.colorScheme.primary
+                            color = if (!p.isCompleted) MaterialTheme.colorScheme.onSurface.copy(alpha = 0.4f) else if (p.score == 3) Color(0xFF10B981) else MaterialTheme.colorScheme.primary
                         )
                     }
                 }
@@ -181,12 +208,12 @@ fun CheckpointView(
         colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface)
     ) {
         Column(modifier = Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
-            val trackerList = remember(targetPassages) {
+            val trackerList = remember(targetPassages, checkpoint) {
                 val trapWrong = mutableMapOf<String, Int>()
                 val trapTotal = mutableMapOf<String, Int>()
                 
-                val standardTraps = listOf(
-                    "Extreme words",
+                val standardTraps = checkpoint?.trapTypes ?: listOf(
+                    "Extreme words (always/never)",
                     "Cause-effect confusion",
                     "Reference/pronoun trap",
                     "Detail vs Main Idea",
@@ -202,15 +229,20 @@ fun CheckpointView(
                 targetPassages.forEach { p ->
                     val answers = p.selectedAnswers
                     p.passage.questions.forEachIndexed { qIdx, question ->
-                        val trap = when (question.trapType.lowercase()) {
-                            "extreme words", "extreme word" -> "Extreme words"
-                            "cause-effect confusion", "cause effect" -> "Cause-effect confusion"
-                            "reference/pronoun trap", "reference trap" -> "Reference/pronoun trap"
-                            "detail vs main idea", "main idea" -> "Detail vs Main Idea"
-                            "tone/attitude misread", "tone misread" -> "Tone/Attitude misread"
-                            "reversal/negation miss", "negation miss", "reversal" -> "Reversal/Negation miss"
-                            else -> question.trapType
-                        }
+                        // Match normalized trap names
+                        val trap = standardTraps.find { it.lowercase().contains(question.trapType.lowercase()) || question.trapType.lowercase().contains(it.lowercase()) }
+                            ?: standardTraps.find {
+                                val tNorm = question.trapType.lowercase()
+                                if (tNorm.contains("extreme")) it.lowercase().contains("extreme")
+                                else if (tNorm.contains("cause")) it.lowercase().contains("cause")
+                                else if (tNorm.contains("pronoun") || tNorm.contains("reference")) it.lowercase().contains("reference")
+                                else if (tNorm.contains("detail") || tNorm.contains("main")) it.lowercase().contains("detail")
+                                else if (tNorm.contains("tone") || tNorm.contains("attitude") || tNorm.contains("mismatch")) it.lowercase().contains("tone")
+                                else if (tNorm.contains("reversal") || tNorm.contains("negation")) it.lowercase().contains("reversal")
+                                else false
+                            }
+                            ?: if (standardTraps.isNotEmpty()) standardTraps[0] else "Extreme words"
+
                         trapTotal[trap] = (trapTotal[trap] ?: 0) + 1
                         if (p.isCompleted && qIdx < answers.size) {
                             val studentAns = answers[qIdx]
@@ -229,34 +261,42 @@ fun CheckpointView(
                 }
             }
 
-            trackerList.forEach { (trap, ratio) ->
-                Column {
-                    Row(
-                        modifier = Modifier.fillMaxWidth(),
-                        horizontalArrangement = Arrangement.SpaceBetween,
-                        verticalAlignment = Alignment.CenterVertically
-                    ) {
-                        Text(
-                            text = trap,
-                            fontWeight = FontWeight.SemiBold,
-                            fontSize = 12.sp,
-                            color = MaterialTheme.colorScheme.onSurface
-                        )
-                        Text(
-                            text = "${(ratio * 100).toInt()}% Susceptibility",
-                            fontSize = 10.sp,
-                            color = MaterialTheme.colorScheme.primary
+            if (trackerList.isEmpty()) {
+                Text(
+                    text = "No trap susceptibility data available yet. Complete checkpoints to populate heatmap.",
+                    style = MaterialTheme.typography.bodySmall,
+                    color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.5f)
+                )
+            } else {
+                trackerList.forEach { (trap, ratio) ->
+                    Column {
+                        Row(
+                            modifier = Modifier.fillMaxWidth(),
+                            horizontalArrangement = Arrangement.SpaceBetween,
+                            verticalAlignment = Alignment.CenterVertically
+                        ) {
+                            Text(
+                                text = trap,
+                                fontWeight = FontWeight.SemiBold,
+                                fontSize = 12.sp,
+                                color = MaterialTheme.colorScheme.onSurface
+                            )
+                            Text(
+                                text = "${(ratio * 100).toInt()}% Susceptibility",
+                                fontSize = 10.sp,
+                                color = MaterialTheme.colorScheme.primary
+                            )
+                        }
+                        LinearProgressIndicator(
+                            progress = { ratio },
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .padding(top = 4.dp)
+                                .clip(RoundedCornerShape(2.dp)),
+                            color = if (ratio > 0.5f) Color(0xFFEF4444) else MaterialTheme.colorScheme.primary,
+                            trackColor = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.08f)
                         )
                     }
-                    LinearProgressIndicator(
-                        progress = { ratio },
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .padding(top = 4.dp)
-                            .clip(RoundedCornerShape(2.dp)),
-                        color = if (ratio > 0.5f) Color(0xFFEF4444) else MaterialTheme.colorScheme.primary,
-                        trackColor = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.08f)
-                    )
                 }
             }
         }
@@ -277,10 +317,18 @@ fun CheckpointView(
         colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface)
     ) {
         Column(modifier = Modifier.padding(16.dp)) {
-            val vocabList = remember(targetPassages) {
-                targetPassages.flatMap { it.passage.vocabulary }
-                    .distinctBy { it.word.lowercase() }
-                    .map { it.word to it.meaning }
+            val vocabList = remember(targetPassages, checkpoint) {
+                if (checkpoint != null && checkpoint.vocabularyInventory.isNotEmpty()) {
+                    val allPassageVocab = targetPassages.flatMap { it.passage.vocabulary }.associateBy { it.word.lowercase() }
+                    checkpoint.vocabularyInventory.map { word ->
+                        val item = allPassageVocab[word.lowercase()]
+                        word to (item?.meaning ?: "Core Vocab")
+                    }
+                } else {
+                    targetPassages.flatMap { it.passage.vocabulary }
+                        .distinctBy { it.word.lowercase() }
+                        .map { it.word to it.meaning }
+                }
             }
 
             vocabList.forEach { (word, meaning) ->
@@ -343,7 +391,9 @@ fun ClosureView(
     passages: List<PassageWithProgress>,
     analytics: com.example.data.ReadingAnalytics,
     reflectionNote: String,
-    onNoteChange: (String) -> Unit
+    onNoteChange: (String) -> Unit,
+    strategicClosure: StrategicClosure?,
+    trapMasteryMatrix: List<TrapMasteryItem>
 ) {
     val nonPlaceholderPassages = remember(passages) { passages.filter { !it.passage.isPlaceholder } }
     val totalNonPlaceholder = nonPlaceholderPassages.size
@@ -358,6 +408,13 @@ fun ClosureView(
     } else {
         "0.0 Mins"
     }
+
+    // Title / Intro
+    Text(
+        text = strategicClosure?.title ?: "Strategic Closure: Health & Medicine",
+        style = MaterialTheme.typography.headlineSmall.copy(fontWeight = FontWeight.Bold, fontFamily = FontFamily.Serif),
+        color = MaterialTheme.colorScheme.onSurface
+    )
 
     // 1. Completion Diploma / Certificate Card
     Card(
@@ -457,45 +514,158 @@ fun ClosureView(
         colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface)
     ) {
         Column(modifier = Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
-            val traps = listOf(
-                "Extreme Words (all/only/never)" to "Exploits generalist intuition",
-                "Cause-Effect Distortion" to "Flips dependent relationships",
-                "Reference / Pronoun Shifting" to "Attributes actions to wrong actors",
-                "Detail vs Main Idea" to "Presents truths out of relevance scope",
-                "Reversal / Negation" to "Hides facts inside double negatives"
-            )
+            if (trapMasteryMatrix.isEmpty()) {
+                val traps = listOf(
+                    "Extreme Words (all/only/never)" to "Exploits generalist intuition",
+                    "Cause-Effect Distortion" to "Flips dependent relationships",
+                    "Reference / Pronoun Shifting" to "Attributes actions to wrong actors",
+                    "Detail vs Main Idea" to "Presents truths out of relevance scope",
+                    "Reversal / Negation" to "Hides facts inside double negatives"
+                )
 
-            traps.forEach { (trap, note) ->
-                Row(
-                    modifier = Modifier.fillMaxWidth(),
-                    horizontalArrangement = Arrangement.SpaceBetween,
-                    verticalAlignment = Alignment.CenterVertically
-                ) {
-                    Column {
-                        Text(
-                            text = trap,
-                            fontWeight = FontWeight.Bold,
-                            fontSize = 13.sp
-                        )
-                        Text(
-                            text = note,
-                            style = MaterialTheme.typography.bodySmall,
-                            color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.6f)
+                traps.forEach { (trap, note) ->
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.SpaceBetween,
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        Column {
+                            Text(
+                                text = trap,
+                                fontWeight = FontWeight.Bold,
+                                fontSize = 13.sp
+                            )
+                            Text(
+                                text = note,
+                                style = MaterialTheme.typography.bodySmall,
+                                color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.6f)
+                            )
+                        }
+                        Icon(
+                            imageVector = Icons.Default.CheckCircle,
+                            contentDescription = "Mastered",
+                            tint = Color(0xFF10B981),
+                            modifier = Modifier.size(18.dp)
                         )
                     }
-                    Icon(
-                        imageVector = Icons.Default.CheckCircle,
-                        contentDescription = "Mastered",
-                        tint = Color(0xFF10B981),
-                        modifier = Modifier.size(18.dp)
-                    )
+                    Divider(color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.05f))
                 }
-                Divider(color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.05f))
+            } else {
+                trapMasteryMatrix.forEach { item ->
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.SpaceBetween,
+                        verticalAlignment = Alignment.Top
+                    ) {
+                        Column(modifier = Modifier.weight(1f)) {
+                            Text(
+                                text = item.trap,
+                                fontWeight = FontWeight.Bold,
+                                fontSize = 13.sp,
+                                color = MaterialTheme.colorScheme.primary
+                            )
+                            Text(
+                                text = "Reference: ${item.passageId.uppercase()} Q${item.questionNumber}",
+                                fontWeight = FontWeight.SemiBold,
+                                fontSize = 10.sp,
+                                color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.5f)
+                            )
+                            Spacer(modifier = Modifier.height(4.dp))
+                            Text(
+                                text = "How It Appeared: ${item.howItAppeared}",
+                                style = MaterialTheme.typography.bodySmall,
+                                color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.8f)
+                            )
+                            Spacer(modifier = Modifier.height(2.dp))
+                            Text(
+                                text = "How To Avoid: ${item.howToAvoid}",
+                                style = MaterialTheme.typography.bodySmall.copy(fontWeight = FontWeight.Medium),
+                                color = Color(0xFF10B981)
+                            )
+                        }
+                        Icon(
+                            imageVector = Icons.Default.CheckCircle,
+                            contentDescription = "Mastered",
+                            tint = Color(0xFF10B981),
+                            modifier = Modifier.size(18.dp).padding(start = 8.dp)
+                        )
+                    }
+                    Divider(color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.05f))
+                }
             }
         }
     }
 
-    // 3. Timekeeper's Log
+    // 3. Golden Rule Card
+    val goldenRule = strategicClosure?.goldenRule ?: "Never trust extreme words without checking."
+    Text(
+        text = "MY GOLDEN RULE",
+        style = MaterialTheme.typography.bodySmall.copy(
+            fontWeight = FontWeight.Bold,
+            letterSpacing = 1.2.sp
+        ),
+        color = MaterialTheme.colorScheme.primary
+    )
+    Card(
+        modifier = Modifier.fillMaxWidth(),
+        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
+        border = BorderStroke(1.dp, MaterialTheme.colorScheme.primary.copy(alpha = 0.3f))
+    ) {
+        Column(modifier = Modifier.padding(16.dp)) {
+            Text(
+                text = "\"$goldenRule\"",
+                style = MaterialTheme.typography.bodyMedium.copy(
+                    fontFamily = FontFamily.Serif,
+                    fontWeight = FontWeight.Bold,
+                    fontStyle = FontStyle.Italic
+                ),
+                color = MaterialTheme.colorScheme.primary,
+                textAlign = TextAlign.Center,
+                modifier = Modifier.fillMaxWidth()
+            )
+        }
+    }
+
+    // 4. Nemesis Traps List
+    val nemesisTraps = strategicClosure?.nemesisTraps ?: emptyList()
+    if (nemesisTraps.isNotEmpty()) {
+        Text(
+            text = "NEMESIS TRAPS ENCOUNTERED",
+            style = MaterialTheme.typography.bodySmall.copy(
+                fontWeight = FontWeight.Bold,
+                letterSpacing = 1.2.sp
+            ),
+            color = MaterialTheme.colorScheme.primary
+        )
+        Card(
+            modifier = Modifier.fillMaxWidth(),
+            colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface)
+        ) {
+            Column(modifier = Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                nemesisTraps.forEach { trap ->
+                    Row(
+                        verticalAlignment = Alignment.CenterVertically,
+                        horizontalArrangement = Arrangement.spacedBy(8.dp)
+                    ) {
+                        Icon(
+                            imageVector = Icons.Default.Warning,
+                            contentDescription = null,
+                            tint = MaterialTheme.colorScheme.error,
+                            modifier = Modifier.size(16.dp)
+                        )
+                        Text(
+                            text = trap,
+                            fontWeight = FontWeight.SemiBold,
+                            fontSize = 12.sp,
+                            color = MaterialTheme.colorScheme.onSurface
+                        )
+                    }
+                }
+            }
+        }
+    }
+
+    // 5. Timekeeper's Log
     Text(
         text = "TIMEKEEPER'S LOG",
         style = MaterialTheme.typography.bodySmall.copy(
@@ -537,7 +707,7 @@ fun ClosureView(
         }
     }
 
-    // 4. Red Flag Challenge
+    // 6. Red Flag Challenge
     Card(
         modifier = Modifier.fillMaxWidth(),
         colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.errorContainer.copy(alpha = 0.15f)),

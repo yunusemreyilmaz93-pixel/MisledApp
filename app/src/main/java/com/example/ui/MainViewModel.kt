@@ -254,4 +254,8 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
             repository.updatePremiumStatus(false)
         }
     }
+
+    fun getCheckpoints(): List<Checkpoint> = repository.getCheckpoints()
+    fun getStrategicClosure(): StrategicClosure? = repository.getStrategicClosure()
+    fun getTrapMasteryMatrix(): List<TrapMasteryItem> = repository.getTrapMasteryMatrix()
 }
