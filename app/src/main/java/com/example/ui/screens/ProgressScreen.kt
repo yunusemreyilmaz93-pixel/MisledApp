@@ -175,14 +175,14 @@ fun ProgressScreen(viewModel: MainViewModel) {
                 )
                 Spacer(modifier = Modifier.height(12.dp))
 
-                // Beautiful Custom Line Drawing
+                // Custom Line Drawing based strictly on actual completed passages
                 val points = remember(completedList) {
-                    val basePoints = mutableListOf(55f, 60f, 65f)
-                    completedList.forEach { p ->
-                        val ratio = p.score.toFloat() / p.passage.questions.size.toFloat()
-                        basePoints.add(ratio * 100f)
+                    val list = completedList.map { p ->
+                        val totalQuestions = p.passage.questions.size
+                        val ratio = if (totalQuestions > 0) p.score.toFloat() / totalQuestions.toFloat() else 0f
+                        ratio * 100f
                     }
-                    if (basePoints.size > 8) basePoints.takeLast(8) else basePoints
+                    if (list.isEmpty()) listOf(0f) else list
                 }
 
                 Box(

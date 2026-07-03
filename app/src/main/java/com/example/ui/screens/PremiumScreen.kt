@@ -29,7 +29,7 @@ fun PremiumScreen(viewModel: MainViewModel) {
     val isPremium = stats.isPremium
 
     var selectedPlanForCheckout by remember { mutableStateOf<CheckoutPlan?>(null) }
-    var billingStatusText by remember { mutableStateOf("Billing Client Connected (v6.1.0)") }
+    var billingStatusText by remember { mutableStateOf("Simulated Sandbox Mode (No Real Google Play Integration)") }
     var showRestoreSuccess by remember { mutableStateOf(false) }
 
     Column(
@@ -101,7 +101,7 @@ fun PremiumScreen(viewModel: MainViewModel) {
                         modifier = Modifier
                             .size(8.dp)
                             .clip(CircleShape)
-                            .background(Color(0xFF10B981))
+                            .background(Color(0xFFEAB308)) // Yellow/Orange for simulated sandbox status
                     )
                     Spacer(modifier = Modifier.width(8.dp))
                     Text(

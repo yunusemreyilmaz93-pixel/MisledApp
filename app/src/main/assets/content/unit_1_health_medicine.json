@@ -172,7 +172,7 @@
           "initiates (sonuç bildiren fiil)"
         ]
       },
-      "isPlaceholder": false
+      "isPlaceholder": true
     },
     {
       "id": "p03",
@@ -233,7 +233,7 @@
           "arguably (olasılık belirten zarf)"
         ]
       },
-      "isPlaceholder": false
+      "isPlaceholder": true
     },
     {
       "id": "p04",

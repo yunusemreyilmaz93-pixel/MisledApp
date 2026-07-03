@@ -89,21 +89,26 @@ class ReadingRepository(
                 val progress = progressMap[passage.id]
                 
                 // Determine if locked
-                // P01-P03 are free. P04+ are premium.
-                val isPremiumGated = index >= 3
+                // P01-P03 are free. P04+ are premium, but placeholder is never available premium content.
+                val isPremiumGated = index >= 3 && !passage.isPlaceholder
                 
-                // Also, sequential progression: lock if previous passage is not completed
+                // Also, sequential progression: lock if previous passage is not completed.
+                // Ignore previous if previous is a placeholder.
                 val isPriorUncompleted = if (index > 0) {
-                    val prevPassageId = staticPassages[index - 1].id
-                    val prevProgress = progressMap[prevPassageId]
-                    prevProgress?.isCompleted != true
+                    val prevPassage = staticPassages[index - 1]
+                    val prevProgress = progressMap[prevPassage.id]
+                    if (!prevPassage.isPlaceholder) {
+                        prevProgress?.isCompleted != true
+                    } else {
+                        false
+                    }
                 } else {
                     false
                 }
 
                 PassageWithProgress(
                     passage = passage,
-                    isCompleted = progress?.isCompleted ?: false,
+                    isCompleted = (progress?.isCompleted ?: false) && !passage.isPlaceholder,
                     score = progress?.score ?: 0,
                     selectedAnswers = progress?.selectedAnswers?.split(",")?.filter { it.isNotEmpty() } ?: emptyList(),
                     isPremiumGated = isPremiumGated,
@@ -273,7 +278,7 @@ class ReadingRepository(
     suspend fun initializeStatsIfEmpty() {
         val stats = userStatsDao.getUserStats()
         if (stats == null) {
-            userStatsDao.insertUserStats(DatabaseUserStats(streak = 3, xp = 350)) // Seed some mock initial state
+            userStatsDao.insertUserStats(DatabaseUserStats(streak = 0, xp = 0)) // New users start with 0 streak and 0 XP
         }
     }
 }

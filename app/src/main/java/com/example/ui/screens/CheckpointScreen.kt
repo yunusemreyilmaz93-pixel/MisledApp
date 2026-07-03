@@ -345,6 +345,20 @@ fun ClosureView(
     reflectionNote: String,
     onNoteChange: (String) -> Unit
 ) {
+    val nonPlaceholderPassages = remember(passages) { passages.filter { !it.passage.isPlaceholder } }
+    val totalNonPlaceholder = nonPlaceholderPassages.size
+    val completedNonPlaceholder = nonPlaceholderPassages.count { it.isCompleted }
+    val completionPercent = if (totalNonPlaceholder > 0) (completedNonPlaceholder * 100) / totalNonPlaceholder else 0
+
+    val completedWithTime = remember(passages) { passages.filter { it.isCompleted && !it.passage.isPlaceholder && it.completionTimeSeconds > 0 } }
+    val averagePaceText = if (completedWithTime.isNotEmpty()) {
+        val avgSeconds = completedWithTime.map { it.completionTimeSeconds }.average()
+        val avgMinutes = avgSeconds / 60.0
+        String.format(java.util.Locale.US, "%.1f Mins", avgMinutes)
+    } else {
+        "0.0 Mins"
+    }
+
     // 1. Completion Diploma / Certificate Card
     Card(
         modifier = Modifier.fillMaxWidth(),
@@ -396,8 +410,14 @@ fun ClosureView(
 
                 Spacer(modifier = Modifier.height(16.dp))
 
+                val certText = if (completionPercent >= 100) {
+                    "This certifies that the candidate has systematically completed all $totalNonPlaceholder available reading laboratories under Unit 1 (Health & Medicine), demonstrating proficient identification of extreme qualifiers, cause-effect distortions, and referential deceptions."
+                } else {
+                    "Diploma In Progress: Systematic completion of all $totalNonPlaceholder active reading laboratories under Unit 1 (Health & Medicine) is required to unlock this diploma. Currently at $completedNonPlaceholder of $totalNonPlaceholder completed."
+                }
+
                 Text(
-                    text = "This certifies that the candidate has systematically completed all 15 reading laboratories under Unit 1 (Health & Medicine), demonstrating proficient identification of extreme qualifiers, cause-effect distortions, and referential deceptions.",
+                    text = certText,
                     textAlign = TextAlign.Center,
                     style = MaterialTheme.typography.bodyMedium.copy(lineHeight = 20.sp),
                     color = Color.White.copy(alpha = 0.8f)
@@ -415,7 +435,7 @@ fun ClosureView(
                     }
                     Column(horizontalAlignment = Alignment.CenterHorizontally) {
                         Text("Unit Completed", fontSize = 10.sp, color = Color.White.copy(alpha = 0.5f))
-                        Text("100% Mastered", fontWeight = FontWeight.Bold, fontSize = 16.sp, color = Color(0xFF10B981))
+                        Text("$completionPercent% Mastered", fontWeight = FontWeight.Bold, fontSize = 16.sp, color = Color(0xFF10B981))
                     }
                 }
             }
@@ -508,7 +528,7 @@ fun ClosureView(
                     )
                 }
                 Text(
-                    text = "5.2 Mins",
+                    text = averagePaceText,
                     fontWeight = FontWeight.Black,
                     fontSize = 20.sp,
                     color = MaterialTheme.colorScheme.primary
