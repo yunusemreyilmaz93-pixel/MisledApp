@@ -1,6 +1,8 @@
 package com.example.data
 
-data class UnitData(
+// Professional exam-prep content models for the Misled Reading Lab system
+
+data class Unit(
     val id: String,
     val title: String,
     val description: String,
@@ -9,6 +11,8 @@ data class UnitData(
 
 data class Passage(
     val id: String,
+    val unitId: String,
+    val passageNumber: Int,
     val title: String,
     val level: String, // "Foundation", "Intermediate", "Advanced"
     val timeLimitMinutes: Int,
@@ -23,12 +27,29 @@ data class Passage(
 
 data class Question(
     val id: String,
+    val questionNumber: Int,
     val prompt: String,
-    val options: List<String>, // Option strings including letters (e.g. "A) ...")
+    val options: List<Option>,
     val correctAnswer: String, // "A", "B", "C", "D", "E"
     val primaryDistractor: String, // "A", "B", "C", "D", "E"
     val explanation: String,
-    val trapType: String // e.g. "Extreme Words", "Cause-Effect Confusion", "Reference Trap", "Detail vs Main Idea", "Tone Misread", "Reversal"
+    val trapType: String,
+    val evidenceSentence: String
+)
+
+data class Option(
+    val letter: String, // "A", "B", "C", "D", "E"
+    val text: String
+) {
+    fun toUiString(): String = "$letter) $text"
+}
+
+data class QuestionAnalysis(
+    val questionId: String,
+    val chosenAnswer: String,
+    val isCorrect: Boolean,
+    val primaryDistractorMatched: Boolean,
+    val trapTriggered: String
 )
 
 data class VocabularyItem(
@@ -37,7 +58,7 @@ data class VocabularyItem(
     val meaning: String, // Turkish
     val synonym: String,
     val example: String,
-    val initialStatus: String = "Learning" // "Learning", "Mastered", "Difficult"
+    val initialStatus: String = "Learning"
 )
 
 data class SentenceAutopsy(
@@ -45,13 +66,20 @@ data class SentenceAutopsy(
     val focus: List<String>
 )
 
-object SeedData {
-    val trapTypesInfo = mapOf(
-        "Extreme Words" to "Look for limiting words like 'all', 'only', 'never', 'solely' that make a choice too restrictive.",
-        "Cause-Effect Confusion" to "Mistaking the result for the cause, or reversing the causal relationship specified in the text.",
-        "Reference Trap" to "Using a pronoun or detail incorrectly to refer to a noun that wasn't the original actor.",
-        "Detail vs Main Idea" to "Selecting a detail that is technically true but doesn't answer the main-idea question.",
-        "Tone Misread" to "Overstating the author's neutral explanation as highly critical or overly positive.",
-        "Reversal" to "Directly contradicting the facts in the passage, often using double negations or subtle antonyms."
-    )
-}
+data class TrapType(
+    val name: String,
+    val description: String
+)
+
+data class Checkpoint(
+    val id: String,
+    val title: String,
+    val requiredPassageIds: List<String>,
+    val description: String
+)
+
+data class StrategicClosure(
+    val graduationTitle: String,
+    val totalRequirementsMet: Boolean,
+    val finalReflection: String
+)

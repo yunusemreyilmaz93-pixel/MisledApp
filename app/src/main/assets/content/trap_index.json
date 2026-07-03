@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Extreme Words",
+    "description": "Look for limiting words like 'all', 'only', 'never', 'solely' that make a choice too restrictive."
+  },
+  {
+    "name": "Cause-Effect Confusion",
+    "description": "Mistaking the result for the cause, or reversing the causal relationship specified in the text."
+  },
+  {
+    "name": "Reference Trap",
+    "description": "Using a pronoun or detail incorrectly to refer to a noun that wasn't the original actor."
+  },
+  {
+    "name": "Detail vs Main Idea",
+    "description": "Selecting a detail that is technically true but doesn't answer the main-idea question."
+  },
+  {
+    "name": "Tone Misread",
+    "description": "Overstating the author's neutral explanation as highly critical or overly positive."
+  },
+  {
+    "name": "Reversal",
+    "description": "Directly contradicting the facts in the passage, often using double negations or subtle antonyms."
+  }
+]

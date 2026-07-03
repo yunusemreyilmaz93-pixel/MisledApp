@@ -1,0 +1,79 @@
+[
+  {
+    "word": "ubiquitous",
+    "partOfSpeech": "Adjective",
+    "meaning": "her yerde bulunan",
+    "synonym": "omnipresent, widespread",
+    "example": "The ubiquitous presence of smartphones has changed society."
+  },
+  {
+    "word": "somnolence",
+    "partOfSpeech": "Noun",
+    "meaning": "uykululuk, uykulu hal",
+    "synonym": "sleepiness, drowsiness",
+    "example": "Melatonin is responsible for inducing somnolence."
+  },
+  {
+    "word": "emit",
+    "partOfSpeech": "Verb",
+    "meaning": "yaymak, sızdırmak",
+    "synonym": "release, give off",
+    "example": "Digital screens emit blue light."
+  },
+  {
+    "word": "deceive",
+    "partOfSpeech": "Verb",
+    "meaning": "aldatmak, kandırmak",
+    "synonym": "mislead, trick",
+    "example": "The brain is effectively deceived into perceiving midnight as midday."
+  },
+  {
+    "word": "suppress",
+    "partOfSpeech": "Verb",
+    "meaning": "baskılamak, bastırmak",
+    "synonym": "inhibit, restrain",
+    "example": "Blue light suppresses the secretion of melatonin."
+  },
+  {
+    "word": "cardiometabolic",
+    "partOfSpeech": "Adjective",
+    "meaning": "kalp ve metabolizma ile ilgili",
+    "synonym": "heart-metabolic",
+    "example": "Sugar causes severe cardiometabolic degradation."
+  },
+  {
+    "word": "lipogenesis",
+    "partOfSpeech": "Noun",
+    "meaning": "yağ oluşumu",
+    "synonym": "fat creation",
+    "example": "Excess fructose triggers hepatic lipogenesis."
+  },
+  {
+    "word": "exhaust",
+    "partOfSpeech": "Verb",
+    "meaning": "tüketmek, bitirmek",
+    "synonym": "deplete, drain",
+    "example": "Overproduction of insulin exhausts pancreatic beta-cells."
+  },
+  {
+    "word": "robust",
+    "partOfSpeech": "Adjective",
+    "meaning": "güçlü, sağlam",
+    "synonym": "strong, durable",
+    "example": "Brisk walking remains a robust health intervention."
+  },
+  {
+    "word": "stimulate",
+    "partOfSpeech": "Verb",
+    "meaning": "uyarmak, tetiklemek",
+    "synonym": "arouse, trigger",
+    "example": "Walking stimulates osteoblast activity in bones."
+  },
+  {
+    "word": "scalable",
+    "partOfSpeech": "Adjective",
+    "meaning": "ölçeklenebilir, genişletilebilir",
+    "synonym": "adaptable, expandable",
+    "example": "Walking is a highly scalable health modality."
+  }
+]

@@ -7,27 +7,74 @@ import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.map
+import kotlinx.coroutines.runBlocking
+
+// Content Data Source abstraction to prepare for future Firebase/Firestore integration
+interface ContentDataSource {
+    suspend fun getUnit(unitId: String): com.example.data.Unit?
+    suspend fun getTrapIndex(): List<TrapType>
+    suspend fun getVocabularyArsenalUnit1(): List<VocabularyItem>
+}
+
+// Local asset-based content data source (current default)
+class AssetContentDataSource(private val context: Context) : ContentDataSource {
+    private val moshi = Moshi.Builder()
+        .add(KotlinJsonAdapterFactory())
+        .build()
+
+    override suspend fun getUnit(unitId: String): com.example.data.Unit? {
+        return try {
+            val filename = when (unitId) {
+                "unit_1_health_medicine" -> "content/unit_1_health_medicine.json"
+                else -> "content/unit_1_health_medicine.json"
+            }
+            val jsonString = context.assets.open(filename).bufferedReader().use { it.readText() }
+            val adapter = moshi.adapter(com.example.data.Unit::class.java)
+            adapter.fromJson(jsonString)
+        } catch (e: Exception) {
+            e.printStackTrace()
+            null
+        }
+    }
+
+    override suspend fun getTrapIndex(): List<TrapType> {
+        return try {
+            val jsonString = context.assets.open("content/trap_index.json").bufferedReader().use { it.readText() }
+            val listType = Types.newParameterizedType(List::class.java, TrapType::class.java)
+            val adapter = moshi.adapter<List<TrapType>>(listType)
+            adapter.fromJson(jsonString) ?: emptyList()
+        } catch (e: Exception) {
+            e.printStackTrace()
+            emptyList()
+        }
+    }
+
+    override suspend fun getVocabularyArsenalUnit1(): List<VocabularyItem> {
+        return try {
+            val jsonString = context.assets.open("content/vocabulary_arsenal_unit_1.json").bufferedReader().use { it.readText() }
+            val listType = Types.newParameterizedType(List::class.java, VocabularyItem::class.java)
+            val adapter = moshi.adapter<List<VocabularyItem>>(listType)
+            adapter.fromJson(jsonString) ?: emptyList()
+        } catch (e: Exception) {
+            e.printStackTrace()
+            emptyList()
+        }
+    }
+}
 
 class ReadingRepository(
     private val context: Context,
     private val vocabularyDao: VocabularyDao,
     private val passageProgressDao: PassageProgressDao,
-    private val userStatsDao: UserStatsDao
+    private val userStatsDao: UserStatsDao,
+    private val contentDataSource: ContentDataSource = AssetContentDataSource(context)
 ) {
-    // 1. Static seed passages loaded from JSON assets
+    // 1. Static seed passages loaded from assets
     private val staticPassages: List<Passage> by lazy {
-        loadPassagesFromAssets()
-    }
-
-    private fun loadPassagesFromAssets(): List<Passage> {
-        return try {
-            val jsonString = context.assets.open("passages.json").bufferedReader().use { it.readText() }
-            val moshi = Moshi.Builder()
-                .add(KotlinJsonAdapterFactory())
-                .build()
-            val listType = Types.newParameterizedType(List::class.java, Passage::class.java)
-            val adapter = moshi.adapter<List<Passage>>(listType)
-            adapter.fromJson(jsonString) ?: emptyList()
+        try {
+            runBlocking {
+                contentDataSource.getUnit("unit_1_health_medicine")?.passages ?: emptyList()
+            }
         } catch (e: Exception) {
             e.printStackTrace()
             emptyList()
@@ -118,6 +165,15 @@ class ReadingRepository(
         )
     }
 
+    // Expose contentDataSource methods
+    suspend fun getTrapIndex(): List<TrapType> {
+        return contentDataSource.getTrapIndex()
+    }
+
+    suspend fun getVocabularyArsenalUnit1(): List<VocabularyItem> {
+        return contentDataSource.getVocabularyArsenalUnit1()
+    }
+
     // 5. Database Actions
     suspend fun completePassage(passageId: String, score: Int, selectedAnswers: List<String>, timeSeconds: Int) {
         val progress = DatabasePassageProgress(
@@ -147,6 +203,44 @@ class ReadingRepository(
 
     suspend fun addWordToArsenal(word: DatabaseVocabularyItem) {
         vocabularyDao.insertVocabulary(word)
+    }
+
+    suspend fun reviewVocabularyItem(word: String, quality: Int) {
+        val currentItem = vocabularyDao.getVocabularyItem(word) ?: return
+        
+        // SM-2 algorithm calculations (quality range is 0..5)
+        val q = quality.coerceIn(0, 5)
+        val newReviewCount = if (q >= 3) currentItem.reviewCount + 1 else 0
+        val newWrongCount = if (q < 3) currentItem.wrongCount + 1 else currentItem.wrongCount
+        
+        val newInterval = when {
+            q < 3 -> 1
+            newReviewCount == 1 -> 1
+            newReviewCount == 2 -> 6
+            else -> Math.round(currentItem.interval * currentItem.easeFactor).toInt().coerceAtLeast(1)
+        }
+        
+        // SM-2 EF formulation: EF' = EF + (0.1 - (5 - q) * (0.08 + (5 - q) * 0.02))
+        val rawEF = currentItem.easeFactor + (0.1f - (5f - q) * (0.08f + (5f - q) * 0.02f))
+        val newEF = rawEF.coerceAtLeast(1.3f)
+        
+        val newStatus = when {
+            q < 3 -> "Difficult"
+            q >= 4 -> "Mastered"
+            else -> "Learning"
+        }
+        
+        val nextDueDate = System.currentTimeMillis() + (newInterval.toLong() * 24L * 60L * 60L * 1000L)
+        
+        val updatedItem = currentItem.copy(
+            reviewCount = newReviewCount,
+            wrongCount = newWrongCount,
+            interval = newInterval,
+            easeFactor = newEF,
+            status = newStatus,
+            dueDate = nextDueDate
+        )
+        vocabularyDao.insertVocabulary(updatedItem)
     }
 
     suspend fun isWordInArsenal(word: String): Boolean {

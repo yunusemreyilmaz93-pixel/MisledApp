@@ -218,6 +218,12 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
         }
     }
 
+    fun reviewVocabularyItem(word: String, quality: Int) {
+        viewModelScope.launch {
+            repository.reviewVocabularyItem(word, quality)
+        }
+    }
+
     fun removeWordFromArsenal(item: DatabaseVocabularyItem) {
         viewModelScope.launch {
             repository.deleteWordFromArsenal(item)

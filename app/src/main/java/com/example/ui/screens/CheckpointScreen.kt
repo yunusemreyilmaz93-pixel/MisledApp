@@ -181,14 +181,53 @@ fun CheckpointView(
         colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface)
     ) {
         Column(modifier = Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
-            val trackerList = listOf(
-                "Extreme words" to 0.4f,
-                "Cause-effect confusion" to 0.6f,
-                "Reference/pronoun trap" to 0.2f,
-                "Detail vs Main Idea" to 0.5f,
-                "Tone/Attitude misread" to 0.1f,
-                "Reversal/Negation miss" to 0.3f
-            )
+            val trackerList = remember(targetPassages) {
+                val trapWrong = mutableMapOf<String, Int>()
+                val trapTotal = mutableMapOf<String, Int>()
+                
+                val standardTraps = listOf(
+                    "Extreme words",
+                    "Cause-effect confusion",
+                    "Reference/pronoun trap",
+                    "Detail vs Main Idea",
+                    "Tone/Attitude misread",
+                    "Reversal/Negation miss"
+                )
+                
+                standardTraps.forEach { trap ->
+                    trapWrong[trap] = 0
+                    trapTotal[trap] = 0
+                }
+
+                targetPassages.forEach { p ->
+                    val answers = p.selectedAnswers
+                    p.passage.questions.forEachIndexed { qIdx, question ->
+                        val trap = when (question.trapType.lowercase()) {
+                            "extreme words", "extreme word" -> "Extreme words"
+                            "cause-effect confusion", "cause effect" -> "Cause-effect confusion"
+                            "reference/pronoun trap", "reference trap" -> "Reference/pronoun trap"
+                            "detail vs main idea", "main idea" -> "Detail vs Main Idea"
+                            "tone/attitude misread", "tone misread" -> "Tone/Attitude misread"
+                            "reversal/negation miss", "negation miss", "reversal" -> "Reversal/Negation miss"
+                            else -> question.trapType
+                        }
+                        trapTotal[trap] = (trapTotal[trap] ?: 0) + 1
+                        if (p.isCompleted && qIdx < answers.size) {
+                            val studentAns = answers[qIdx]
+                            if (studentAns != question.correctAnswer) {
+                                trapWrong[trap] = (trapWrong[trap] ?: 0) + 1
+                            }
+                        }
+                    }
+                }
+                
+                trapTotal.keys.filter { (trapTotal[it] ?: 0) > 0 }.map { trap ->
+                    val total = trapTotal[trap] ?: 0
+                    val wrong = trapWrong[trap] ?: 0
+                    val ratio = if (total > 0) wrong.toFloat() / total.toFloat() else 0.0f
+                    trap to ratio
+                }
+            }
 
             trackerList.forEach { (trap, ratio) ->
                 Column {
@@ -238,13 +277,11 @@ fun CheckpointView(
         colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface)
     ) {
         Column(modifier = Modifier.padding(16.dp)) {
-            val vocabList = listOf(
-                "ubiquitous" to "her yerde bulunan",
-                "somnolence" to "uykululuk hali",
-                "emit" to "yaymak",
-                "deceive" to "aldatmak",
-                "suppress" to "baskılamak"
-            )
+            val vocabList = remember(targetPassages) {
+                targetPassages.flatMap { it.passage.vocabulary }
+                    .distinctBy { it.word.lowercase() }
+                    .map { it.word to it.meaning }
+            }
 
             vocabList.forEach { (word, meaning) ->
                 var isChecked by remember { mutableStateOf(true) }

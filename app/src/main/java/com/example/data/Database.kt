@@ -48,6 +48,9 @@ interface VocabularyDao {
     @Query("SELECT * FROM vocabulary_arsenal ORDER BY addedTimestamp DESC")
     fun getAllVocabulary(): Flow<List<DatabaseVocabularyItem>>
 
+    @Query("SELECT * FROM vocabulary_arsenal WHERE word = :word LIMIT 1")
+    suspend fun getVocabularyItem(word: String): DatabaseVocabularyItem?
+
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertVocabulary(item: DatabaseVocabularyItem)
 

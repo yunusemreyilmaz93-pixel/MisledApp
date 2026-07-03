@@ -106,6 +106,53 @@ fun PassageScreen(viewModel: MainViewModel) {
     val pWrapper = activePassageWrapper ?: return
 
     val passage = pWrapper.passage
+
+    if (passage.isPlaceholder) {
+        Scaffold { innerPadding ->
+            Box(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .padding(innerPadding)
+                    .padding(24.dp),
+                contentAlignment = Alignment.Center
+            ) {
+                Column(
+                    horizontalAlignment = Alignment.CenterHorizontally,
+                    verticalArrangement = Arrangement.spacedBy(16.dp),
+                    modifier = Modifier.fillMaxWidth()
+                ) {
+                    Icon(
+                        imageVector = Icons.Default.Construction,
+                        contentDescription = null,
+                        tint = MaterialTheme.colorScheme.primary,
+                        modifier = Modifier.size(64.dp)
+                    )
+                    Text(
+                        text = "Content being prepared",
+                        style = MaterialTheme.typography.titleLarge.copy(fontWeight = FontWeight.Bold),
+                        color = MaterialTheme.colorScheme.onBackground
+                    )
+                    Text(
+                        text = "This passage (\"${passage.title}\") is currently being prepared for the upcoming Misled edition. It will soon contain premium analytical reading drills, sentence autopsies, and strategic traps.",
+                        style = MaterialTheme.typography.bodyMedium,
+                        color = MaterialTheme.colorScheme.onBackground.copy(alpha = 0.7f),
+                        textAlign = TextAlign.Center,
+                        modifier = Modifier.padding(horizontal = 16.dp)
+                    )
+                    Button(
+                        onClick = { viewModel.exitPassageStudy() },
+                        shape = RoundedCornerShape(8.dp),
+                        colors = ButtonDefaults.buttonColors(containerColor = MaterialTheme.colorScheme.primary)
+                    ) {
+                        Icon(Icons.Default.ArrowBack, contentDescription = null, tint = MaterialTheme.colorScheme.onPrimary)
+                        Spacer(modifier = Modifier.width(8.dp))
+                        Text("Return to Lab", color = MaterialTheme.colorScheme.onPrimary)
+                    }
+                }
+            }
+        }
+        return
+    }
     
     val phrasesToHighlight = remember(passage, examModeActive) {
         if (examModeActive) {
@@ -454,7 +501,7 @@ fun QuestionBlock(
 
             // Multiple Choice Options (A - E)
             question.options.forEach { option ->
-                val optionLetter = option.take(1) // "A", "B", "C", "D", "E"
+                val optionLetter = option.letter
                 val isSelected = selectedLetter == optionLetter
                 
                 // Color codes for options based on Exam Mode vs Analysis Mode
@@ -486,7 +533,7 @@ fun QuestionBlock(
                     border = optionBorder
                 ) {
                     Text(
-                        text = option,
+                        text = option.toUiString(),
                         style = MaterialTheme.typography.bodyMedium,
                         color = MaterialTheme.colorScheme.onSurface,
                         modifier = Modifier.padding(12.dp)

@@ -1,0 +1,455 @@
+{
+  "id": "unit_1_health_medicine",
+  "title": "Unit 1: Health & Medicine",
+  "description": "Master medical texts, causation pathways, and biochemical deceptions.",
+  "passages": [
+    {
+      "id": "p01",
+      "unitId": "unit_1_health_medicine",
+      "passageNumber": 1,
+      "title": "Screens vs. Sleep: The Blue Light Effect",
+      "level": "Foundation",
+      "timeLimitMinutes": 6,
+      "strategy": "Follow the causal chain: LED screens -> HEV blue light -> ipRGC retinal cells -> SCN master clock -> suppressed melatonin -> delayed sleep.",
+      "passageText": "In the modern era, the ubiquitous presence of digital screens has fundamentally altered human sleep architecture. Biological organisms are finely tuned to the cyclical rhythms of solar illumination. When evening approaches, the absence of short-wavelength light signals the pineal gland to initiate the synthesis of melatonin, the hormone responsible for inducing somnolence. However, light-emitting diodes (LEDs) utilized in smartphones, tablets, and computers emit concentrated beams of high-energy visible (HEV) blue light, typically in the 450–480 nanometer spectrum. This specific band of light strongly stimulates melanopsin-containing intrinsically photosensitive retinal ganglion cells (ipRGCs). These cells project directly to the suprachiasmatic nucleus (SCN)—the body's master circadian pacemaker. Consequently, the brain is effectively deceived into perceiving midnight as midday, suppressing melatonin secretion. This circadian disruption not only delays sleep onset but also curtails deep slow-wave sleep phases, leading to chronic neurological fatigue and metabolic imbalances. Thus, what appears as a harmless scroll in bed is actually a profound physiological intervention.",
+      "questions": [
+        {
+          "id": "p01-q1",
+          "questionNumber": 1,
+          "prompt": "According to the passage, why is blue light considered problematic at night?",
+          "options": [
+            { "letter": "A", "text": "It disrupts sleep by tricking the circadian pacemaker into halting melatonin synthesis." },
+            { "letter": "B", "text": "It directly causes the pineal gland to produce excessive sleep-inducing hormones." },
+            { "letter": "C", "text": "It decreases the brain's metabolic activity, leading to rapid neurological exhaustion." },
+            { "letter": "D", "text": "It represents the only wavelength of light capable of penetrating retinal cells." },
+            { "letter": "E", "text": "It completely prevents the suprachiasmatic nucleus from detecting solar illumination." }
+          ],
+          "correctAnswer": "A",
+          "primaryDistractor": "E",
+          "explanation": "Metindeki 'suppressing melatonin secretion' ve 'deceived into perceiving midnight as midday' ifadeleri A seçeneğindeki causal bağı doğrular. E seçeneğindeki 'completely prevents' ifadesi ise bir aşırı genellemedir ve yanlıştır (Extreme Words tuzağı).",
+          "trapType": "Detail vs Main Idea",
+          "evidenceSentence": "Consequently, the brain is effectively deceived into perceiving midnight as midday, suppressing melatonin secretion."
+        },
+        {
+          "id": "p01-q2",
+          "questionNumber": 2,
+          "prompt": "Based on the text, the pineal gland's production of melatonin is naturally triggered by which of the following?",
+          "options": [
+            { "letter": "A", "text": "Concentrated exposure to high-energy visible blue light spectrums." },
+            { "letter": "B", "text": "The absence of short-wavelength illumination as daylight fades." },
+            { "letter": "C", "text": "Direct signals received from intrinsically photosensitive retinal ganglion cells during midday." },
+            { "letter": "D", "text": "General physiological fatigue accumulating in biological organisms." },
+            { "letter": "E", "text": "The acceleration of sleep onset and slow-wave deep sleep phases." }
+          ],
+          "correctAnswer": "B",
+          "primaryDistractor": "A",
+          "explanation": "Metinde 'the absence of short-wavelength light signals the pineal gland to initiate...' denilmektedir. Dolayısıyla melatonini tetikleyen şey kısa dalga boylu ışığın eksikliğidir. B seçeneği bunu doğrudan ifade eder. A seçeneği ise melatonini baskılayan faktördür (Reversal/Cause-Effect tuzağı).",
+          "trapType": "Cause-Effect Confusion",
+          "evidenceSentence": "When evening approaches, the absence of short-wavelength light signals the pineal gland to initiate the synthesis of melatonin, the hormone responsible for inducing somnolence."
+        },
+        {
+          "id": "p01-q3",
+          "questionNumber": 3,
+          "prompt": "What can be inferred from the author's description of bedtime scrolling as a 'profound physiological intervention'?",
+          "options": [
+            { "letter": "A", "text": "Scrolling in bed is a highly recommended scientific strategy to stabilize metabolic rates." },
+            { "letter": "B", "text": "Reading digital content is a therapeutic tool that helps cure neurological fatigue." },
+            { "letter": "C", "text": "Simple habits involving screens can have significant and adverse biological effects." },
+            { "letter": "D", "text": "Melatonin synthesis can only be fully optimized through night-time device usage." },
+            { "letter": "E", "text": "Biological organisms are immune to light-emitting diodes once sleep is achieved." }
+          ],
+          "correctAnswer": "C",
+          "primaryDistractor": "A",
+          "explanation": "Yazar, basit bir 'bedtime scroll' (yataktayken telefona bakmak) hareketinin aslında vücut üzerinde 'derin biyolojik müdahale' (profound physiological intervention) yarattığını belirterek, bu sıradan alışkanlığın olumsuz etkilerine dikkat çekmektedir. Dolayısıyla C şıkkı doğru bir çıkarımdır.",
+          "trapType": "Extreme Words",
+          "evidenceSentence": "Thus, what appears as a harmless scroll in bed is actually a profound physiological intervention."
+        }
+      ],
+      "vocabulary": [
+        {
+          "word": "ubiquitous",
+          "partOfSpeech": "Adjective",
+          "meaning": "her yerde bulunan",
+          "synonym": "omnipresent, widespread",
+          "example": "The ubiquitous presence of smartphones has changed society."
+        },
+        {
+          "word": "somnolence",
+          "partOfSpeech": "Noun",
+          "meaning": "uykululuk, uykulu hal",
+          "synonym": "sleepiness, drowsiness",
+          "example": "Melatonin is responsible for inducing somnolence."
+        },
+        {
+          "word": "emit",
+          "partOfSpeech": "Verb",
+          "meaning": "yaymak, sızdırmak",
+          "synonym": "release, give off",
+          "example": "Digital screens emit blue light."
+        },
+        {
+          "word": "deceive",
+          "partOfSpeech": "Verb",
+          "meaning": "aldatmak, kandırmak",
+          "synonym": "mislead, trick",
+          "example": "The brain is effectively deceived into perceiving midnight as midday."
+        },
+        {
+          "word": "suppress",
+          "partOfSpeech": "Verb",
+          "meaning": "baskılamak, bastırmak",
+          "synonym": "inhibit, restrain",
+          "example": "Blue light suppresses the secretion of melatonin."
+        }
+      ],
+      "masterTechnique": "Biyolojik süreç anlatan metinlerde artış (increase)/azalış (decrease) ve varlık (presence)/yokluk (absence) zıtlıklarına dikkat et. ÖSYM bu zıtlıkları şıklarda sıklıkla takas eder.",
+      "sentenceAutopsy": {
+        "sentence": "When evening approaches, the absence of short-wavelength light signals the pineal gland to initiate the synthesis of melatonin, the hormone responsible for inducing somnolence.",
+        "focus": [
+          "When approaches (Zaman zarfı)",
+          "the absence of... (Cümlenin asıl öznesi)",
+          "signals ... to initiate (Sıklıkla sorulan yönlendirme yapısı)"
+        ]
+      },
+      "isPlaceholder": false
+    },
+    {
+      "id": "p02",
+      "unitId": "unit_1_health_medicine",
+      "passageNumber": 2,
+      "title": "The Hidden Danger: Added Sugar",
+      "level": "Foundation",
+      "timeLimitMinutes": 6,
+      "strategy": "Identify added vs natural sugars, trace insulin resistance trigger mechanism.",
+      "passageText": "Unlike natural sugars found in whole fruits, added sugar in processed foods represents a significant threat to global cardiometabolic health. Sucrose and high-fructose corn syrup are chemically designed to enhance hyper-palatability, prompting excessive consumption. The liver metabolizes fructose directly, converting excesses into lipids via de novo lipogenesis. This process accumulates fat within liver cells, initiating a cascade of insulin resistance and systemic low-grade inflammation. Over time, the pancreas is forced to secrete increasingly higher volumes of insulin to maintain glycemic control, eventually exhausting its beta-cells. This physiological degradation paves the path for Type 2 diabetes and atherosclerotic cardiovascular disease. Thus, chronic consumption of processed foods functions as a slow cellular poison.",
+      "questions": [
+        {
+          "id": "p02-q1",
+          "questionNumber": 1,
+          "prompt": "According to the text, what is the primary biological consequence of fructose excess in the liver?",
+          "options": [
+            { "letter": "A", "text": "It instantly prompts the pancreas to reduce its natural insulin output." },
+            { "letter": "B", "text": "It undergoes lipogenesis, generating lipid accumulations that trigger insulin resistance." },
+            { "letter": "C", "text": "It gets converted into natural sugars that promote muscular recovery." },
+            { "letter": "D", "text": "It selectively destroys the beta-cells of the pancreas within hours of consumption." },
+            { "letter": "E", "text": "It prevents systemic inflammation by stabilizing cardiometabolic functions." }
+          ],
+          "correctAnswer": "B",
+          "primaryDistractor": "D",
+          "explanation": "Metinde fruktozun karaciğerde de novo lipogeneze uğrayarak yağ birikimine ve bunun da insülin direncine yol açtığı belirtilmiştir. B seçeneği bunu tam karşılar. D şıkkı ise zaman sınırını abartır (Extreme/Time-limit hatası).",
+          "trapType": "Detail vs Main Idea",
+          "evidenceSentence": "The liver metabolizes fructose directly, converting excesses into lipids via de novo lipogenesis."
+        }
+      ],
+      "vocabulary": [
+        {
+          "word": "cardiometabolic",
+          "partOfSpeech": "Adjective",
+          "meaning": "kalp ve metabolizma ile ilgili",
+          "synonym": "heart-metabolic",
+          "example": "Sugar causes severe cardiometabolic degradation."
+        },
+        {
+          "word": "lipogenesis",
+          "partOfSpeech": "Noun",
+          "meaning": "yağ oluşumu",
+          "synonym": "fat creation",
+          "example": "Excess fructose triggers hepatic lipogenesis."
+        },
+        {
+          "word": "exhaust",
+          "partOfSpeech": "Verb",
+          "meaning": "tüketmek, bitirmek",
+          "synonym": "deplete, drain",
+          "example": "Overproduction of insulin exhausts pancreatic beta-cells."
+        }
+      ],
+      "masterTechnique": "Kiyatlama (Unlike/Unlike natural sugars) yapılan yerleri iyi çiz. ÖSYM iki farklı kategorinin (örneğin added vs natural) özelliklerini şıklarda yer değiştirerek sorar.",
+      "sentenceAutopsy": {
+        "sentence": "The liver metabolizes fructose directly, converting excesses into lipids via de novo lipogenesis, which initiates insulin resistance.",
+        "focus": [
+          "converting excesses into (aktif kısaltma)",
+          "initiates (sonuç bildiren fiil)"
+        ]
+      },
+      "isPlaceholder": false
+    },
+    {
+      "id": "p03",
+      "unitId": "unit_1_health_medicine",
+      "passageNumber": 3,
+      "title": "Walking: The Simplest Medicine",
+      "level": "Foundation",
+      "timeLimitMinutes": 6,
+      "strategy": "Focus on the low-intensity cardiorespiratory benefits and skeletal benefits.",
+      "passageText": "While high-intensity interval training dominates modern fitness trends, simple low-intensity physical activity like brisk walking remains the most robust demographic-wide health intervention. Clinical trials confirm that walking just thirty minutes daily enhances cardiorespiratory fitness, lowers blood pressure, and improves lipid profiles. Furthermore, walking is a weight-bearing exercise that stimulates osteoblast activity, thereby maintaining bone mineral density and preventing osteoporosis in aging populations. More importantly, walking promotes the release of brain-derived neurotrophic factor (BDNF), which directly stimulates neurogenesis and combats mild depression. Because it carries an exceptionally low injury risk, brisk walking is arguably the most scalable therapeutic modality available.",
+      "questions": [
+        {
+          "id": "p03-q1",
+          "questionNumber": 1,
+          "prompt": "According to the passage, walking helps combat osteoporosis by:",
+          "options": [
+            { "letter": "A", "text": "Releasing high amounts of brain-derived neurotrophic factors." },
+            { "letter": "B", "text": "Restricting low-intensity cards to increase blood flow." },
+            { "letter": "C", "text": "Functioning as a weight-bearing activity that stimulates osteoblast cells." },
+            { "letter": "D", "text": "Completely replacing high-intensity interval training routines." },
+            { "letter": "E", "text": "Lowering lipid profiles and stabilizing blood pressure naturally." }
+          ],
+          "correctAnswer": "C",
+          "primaryDistractor": "A",
+          "explanation": "Metinde osteoporoza karşı 'weight-bearing exercise that stimulates osteoblast activity' denilerek C şıkkı desteklenmiştir. A seçeneği ise zihinsel faydalarıyla ilgilidir (Detail vs Detail tuzağı).",
+          "trapType": "Reference Trap",
+          "evidenceSentence": "Furthermore, walking is a weight-bearing exercise that stimulates osteoblast activity, thereby maintaining bone mineral density and preventing osteoporosis in aging populations."
+        }
+      ],
+      "vocabulary": [
+        {
+          "word": "robust",
+          "partOfSpeech": "Adjective",
+          "meaning": "güçlü, sağlam",
+          "synonym": "strong, durable",
+          "example": "Brisk walking remains a robust health intervention."
+        },
+        {
+          "word": "stimulate",
+          "partOfSpeech": "Verb",
+          "meaning": "uyarmak, tetiklemek",
+          "synonym": "arouse, trigger",
+          "example": "Walking stimulates osteoblast activity in bones."
+        },
+        {
+          "word": "scalable",
+          "partOfSpeech": "Adjective",
+          "meaning": "ölçeklenebilir, genişletilebilir",
+          "synonym": "adaptable, expandable",
+          "example": "Walking is a highly scalable health modality."
+        }
+      ],
+      "masterTechnique": "Kardiyovasküler fayda ile zihinsel faydayı (BDNF) ayırt et. İlgisiz faydaları birleştirip sebep-sonuç ilişkisi kuran şıklar her zaman güçlü çeldiricidir.",
+      "sentenceAutopsy": {
+        "sentence": "Because it carries an exceptionally low injury risk, brisk walking is arguably the most scalable therapeutic modality available.",
+        "focus": [
+          "Because (sebep bağlacı)",
+          "arguably (olasılık belirten zarf)"
+        ]
+      },
+      "isPlaceholder": false
+    },
+    {
+      "id": "p04",
+      "unitId": "unit_1_health_medicine",
+      "passageNumber": 4,
+      "title": "Bacteria vs. Virus: Understanding the Difference",
+      "level": "Foundation",
+      "timeLimitMinutes": 6,
+      "strategy": "",
+      "passageText": "",
+      "questions": [],
+      "vocabulary": [],
+      "masterTechnique": "",
+      "sentenceAutopsy": {
+        "sentence": "",
+        "focus": []
+      },
+      "isPlaceholder": true
+    },
+    {
+      "id": "p05",
+      "unitId": "unit_1_health_medicine",
+      "passageNumber": 5,
+      "title": "Hydration Myths: Do You Need 8 Glasses?",
+      "level": "Foundation",
+      "timeLimitMinutes": 6,
+      "strategy": "",
+      "passageText": "",
+      "questions": [],
+      "vocabulary": [],
+      "masterTechnique": "",
+      "sentenceAutopsy": {
+        "sentence": "",
+        "focus": []
+      },
+      "isPlaceholder": true
+    },
+    {
+      "id": "p06",
+      "unitId": "unit_1_health_medicine",
+      "passageNumber": 6,
+      "title": "Antibiotic Resistance: A Growing Crisis",
+      "level": "Intermediate",
+      "timeLimitMinutes": 8,
+      "strategy": "",
+      "passageText": "",
+      "questions": [],
+      "vocabulary": [],
+      "masterTechnique": "",
+      "sentenceAutopsy": {
+        "sentence": "",
+        "focus": []
+      },
+      "isPlaceholder": true
+    },
+    {
+      "id": "p07",
+      "unitId": "unit_1_health_medicine",
+      "passageNumber": 7,
+      "title": "The Placebo Effect: Mind Over Matter",
+      "level": "Intermediate",
+      "timeLimitMinutes": 8,
+      "strategy": "",
+      "passageText": "",
+      "questions": [],
+      "vocabulary": [],
+      "masterTechnique": "",
+      "sentenceAutopsy": {
+        "sentence": "",
+        "focus": []
+      },
+      "isPlaceholder": true
+    },
+    {
+      "id": "p08",
+      "unitId": "unit_1_health_medicine",
+      "passageNumber": 8,
+      "title": "Herd Immunity: Protecting the Community",
+      "level": "Intermediate",
+      "timeLimitMinutes": 8,
+      "strategy": "",
+      "passageText": "",
+      "questions": [],
+      "vocabulary": [],
+      "masterTechnique": "",
+      "sentenceAutopsy": {
+        "sentence": "",
+        "focus": []
+      },
+      "isPlaceholder": true
+    },
+    {
+      "id": "p09",
+      "unitId": "unit_1_health_medicine",
+      "passageNumber": 9,
+      "title": "Mental Health: Stigma vs. Science",
+      "level": "Intermediate",
+      "timeLimitMinutes": 8,
+      "strategy": "",
+      "passageText": "",
+      "questions": [],
+      "vocabulary": [],
+      "masterTechnique": "",
+      "sentenceAutopsy": {
+        "sentence": "",
+        "focus": []
+      },
+      "isPlaceholder": true
+    },
+    {
+      "id": "p10",
+      "unitId": "unit_1_health_medicine",
+      "passageNumber": 10,
+      "title": "Telemedicine: The Doctor is Online",
+      "level": "Intermediate",
+      "timeLimitMinutes": 8,
+      "strategy": "",
+      "passageText": "",
+      "questions": [],
+      "vocabulary": [],
+      "masterTechnique": "",
+      "sentenceAutopsy": {
+        "sentence": "",
+        "focus": []
+      },
+      "isPlaceholder": true
+    },
+    {
+      "id": "p11",
+      "unitId": "unit_1_health_medicine",
+      "passageNumber": 11,
+      "title": "CRISPR and the Ethics of Gene Editing",
+      "level": "Advanced",
+      "timeLimitMinutes": 10,
+      "strategy": "",
+      "passageText": "",
+      "questions": [],
+      "vocabulary": [],
+      "masterTechnique": "",
+      "sentenceAutopsy": {
+        "sentence": "",
+        "focus": []
+      },
+      "isPlaceholder": true
+    },
+    {
+      "id": "p12",
+      "unitId": "unit_1_health_medicine",
+      "passageNumber": 12,
+      "title": "Pandemics: The Challenge of Asymptomatic Spread",
+      "level": "Advanced",
+      "timeLimitMinutes": 10,
+      "strategy": "",
+      "passageText": "",
+      "questions": [],
+      "vocabulary": [],
+      "masterTechnique": "",
+      "sentenceAutopsy": {
+        "sentence": "",
+        "focus": []
+      },
+      "isPlaceholder": true
+    },
+    {
+      "id": "p13",
+      "unitId": "unit_1_health_medicine",
+      "passageNumber": 13,
+      "title": "Neuroplasticity: The Malleable Brain",
+      "level": "Advanced",
+      "timeLimitMinutes": 10,
+      "strategy": "",
+      "passageText": "",
+      "questions": [],
+      "vocabulary": [],
+      "masterTechnique": "",
+      "sentenceAutopsy": {
+        "sentence": "",
+        "focus": []
+      },
+      "isPlaceholder": true
+    },
+    {
+      "id": "p14",
+      "unitId": "unit_1_health_medicine",
+      "passageNumber": 14,
+      "title": "Healthcare Inequality: The Social Determinants",
+      "level": "Advanced",
+      "timeLimitMinutes": 10,
+      "strategy": "",
+      "passageText": "",
+      "questions": [],
+      "vocabulary": [],
+      "masterTechnique": "",
+      "sentenceAutopsy": {
+        "sentence": "",
+        "focus": []
+      },
+      "isPlaceholder": true
+    },
+    {
+      "id": "p15",
+      "unitId": "unit_1_health_medicine",
+      "passageNumber": 15,
+      "title": "The Quest for Longevity: Curing Aging?",
+      "level": "Advanced",
+      "timeLimitMinutes": 10,
+      "strategy": "",
+      "passageText": "",
+      "questions": [],
+      "vocabulary": [],
+      "masterTechnique": "",
+      "sentenceAutopsy": {
+        "sentence": "",
+        "focus": []
+      },
+      "isPlaceholder": true
+    }
+  ]
+}

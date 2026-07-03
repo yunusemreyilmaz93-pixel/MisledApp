@@ -157,6 +157,7 @@ fun VocabularyScreen(viewModel: MainViewModel) {
                     VocabItemCard(
                         item = item,
                         onUpdateStatus = { status -> viewModel.updateWordStatus(item.word, status) },
+                        onReviewItem = { quality -> viewModel.reviewVocabularyItem(item.word, quality) },
                         onDelete = { viewModel.removeWordFromArsenal(item) }
                     )
                 }
@@ -249,6 +250,7 @@ fun VocabularyScreen(viewModel: MainViewModel) {
 fun VocabItemCard(
     item: DatabaseVocabularyItem,
     onUpdateStatus: (String) -> Unit,
+    onReviewItem: (Int) -> Unit,
     onDelete: () -> Unit
 ) {
     var expanded by remember { mutableStateOf(false) }
@@ -397,6 +399,46 @@ fun VocabItemCard(
                             color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.5f),
                             fontWeight = FontWeight.Bold
                         )
+                    }
+
+                    Spacer(modifier = Modifier.height(10.dp))
+
+                    // SM-2 Practice Panel
+                    Text(
+                        text = "SM-2 PRACTICE RATING",
+                        fontWeight = FontWeight.Bold,
+                        style = MaterialTheme.typography.bodySmall,
+                        color = MaterialTheme.colorScheme.primary,
+                        modifier = Modifier.padding(vertical = 2.dp)
+                    )
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.spacedBy(6.dp)
+                    ) {
+                        val ratings = listOf(
+                            1 to "Forgot",
+                            3 to "Hard",
+                            4 to "Good",
+                            5 to "Easy"
+                        )
+                        ratings.forEach { (q, label) ->
+                            Box(
+                                modifier = Modifier
+                                    .weight(1f)
+                                    .background(MaterialTheme.colorScheme.primary.copy(alpha = 0.08f), shape = RoundedCornerShape(6.dp))
+                                    .border(1.dp, MaterialTheme.colorScheme.primary.copy(alpha = 0.2f), shape = RoundedCornerShape(6.dp))
+                                    .clickable { onReviewItem(q) }
+                                    .padding(vertical = 6.dp),
+                                contentAlignment = Alignment.Center
+                            ) {
+                                Text(
+                                    text = label,
+                                    fontSize = 10.sp,
+                                    fontWeight = FontWeight.Bold,
+                                    color = MaterialTheme.colorScheme.primary
+                                )
+                            }
+                        }
                     }
 
                     Spacer(modifier = Modifier.height(12.dp))
