@@ -1,0 +1,6 @@
+{
+  "name": "Misled Reading Lab",
+  "description": "Strategic YDT/YDS English reading preparation app using the Misled Reading method.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

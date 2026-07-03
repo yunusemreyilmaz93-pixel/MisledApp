@@ -1,0 +1,1168 @@
+[
+  {
+    "id": "p01",
+    "title": "Screens vs. Sleep: The Blue Light Effect",
+    "level": "Foundation",
+    "timeLimitMinutes": 6,
+    "strategy": "Follow the causal chain: LED screens -> HEV blue light -> ipRGC retinal cells -> SCN master clock -> suppressed melatonin -> delayed sleep.",
+    "passageText": "In the modern era, the ubiquitous presence of digital screens has fundamentally altered human sleep architecture. Biological organisms are finely tuned to the cyclical rhythms of solar illumination. When evening approaches, the absence of short-wavelength light signals the pineal gland to initiate the synthesis of melatonin, the hormone responsible for inducing somnolence. However, light-emitting diodes (LEDs) utilized in smartphones, tablets, and computers emit concentrated beams of high-energy visible (HEV) blue light, typically in the 450–480 nanometer spectrum. This specific band of light strongly stimulates melanopsin-containing intrinsically photosensitive retinal ganglion cells (ipRGCs). These cells project directly to the suprachiasmatic nucleus (SCN)—the body's master circadian pacemaker. Consequently, the brain is effectively deceived into perceiving midnight as midday, suppressing melatonin secretion. This circadian disruption not only delays sleep onset but also curtails deep slow-wave sleep phases, leading to chronic neurological fatigue and metabolic imbalances. Thus, what appears as a harmless scroll in bed is actually a profound physiological intervention.",
+    "questions": [
+      {
+        "id": "p01-q1",
+        "prompt": "According to the passage, why is blue light considered problematic at night?",
+        "options": [
+          "A) It disrupts sleep by tricking the circadian pacemaker into halting melatonin synthesis.",
+          "B) It directly causes the pineal gland to produce excessive sleep-inducing hormones.",
+          "C) It decreases the brain's metabolic activity, leading to rapid neurological exhaustion.",
+          "D) It represents the only wavelength of light capable of penetrating retinal cells.",
+          "E) It completely prevents the suprachiasmatic nucleus from detecting solar illumination."
+        ],
+        "correctAnswer": "A",
+        "primaryDistractor": "E",
+        "explanation": "Metindeki 'suppressing melatonin secretion' ve 'deceived into perceiving midnight as midday' ifadeleri A seçeneğindeki causal bağı doğrular. E seçeneğindeki 'completely prevents' ifadesi ise bir aşırı genellemedir ve yanlıştır (Extreme Words tuzağı).",
+        "trapType": "Detail vs Main Idea"
+      },
+      {
+        "id": "p01-q2",
+        "prompt": "Based on the text, the pineal gland's production of melatonin is naturally triggered by which of the following?",
+        "options": [
+          "A) Concentrated exposure to high-energy visible blue light spectrums.",
+          "B) The absence of short-wavelength illumination as daylight fades.",
+          "C) Direct signals received from intrinsically photosensitive retinal ganglion cells during midday.",
+          "D) General physiological fatigue accumulating in biological organisms.",
+          "E) The acceleration of sleep onset and slow-wave deep sleep phases."
+        ],
+        "correctAnswer": "B",
+        "primaryDistractor": "A",
+        "explanation": "Metinde 'the absence of short-wavelength light signals the pineal gland to initiate...' denilmektedir. Dolayısıyla melatonini tetikleyen şey kısa dalga boylu ışığın eksikliğidir. B seçeneği bunu doğrudan ifade eder. A seçeneği ise melatonini baskılayan faktördür (Reversal/Cause-Effect tuzağı).",
+        "trapType": "Cause-Effect Confusion"
+      },
+      {
+        "id": "p01-q3",
+        "prompt": "What can be inferred from the author's description of bedtime scrolling as a 'profound physiological intervention'?",
+        "options": [
+          "A) Scrolling in bed is a highly recommended scientific strategy to stabilize metabolic rates.",
+          "B) Reading digital content is a therapeutic tool that helps cure neurological fatigue.",
+          "C) Simple habits involving screens can have significant and adverse biological effects.",
+          "D) Melatonin synthesis can only be fully optimized through night-time device usage.",
+          "E) Biological organisms are immune to light-emitting diodes once sleep is achieved."
+        ],
+        "correctAnswer": "C",
+        "primaryDistractor": "A",
+        "explanation": "Yazar, basit bir 'bedtime scroll' (yataktayken telefona bakmak) hareketinin aslında vücut üzerinde 'derin biyolojik müdahale' (profound physiological intervention) yarattığını belirterek, bu sıradan alışkanlığın olumsuz etkilerine dikkat çekmektedir. Dolayısıyla C şıkkı doğru bir çıkarımdır.",
+        "trapType": "Extreme Words"
+      }
+    ],
+    "vocabulary": [
+      {
+        "word": "ubiquitous",
+        "partOfSpeech": "Adjective",
+        "meaning": "her yerde bulunan",
+        "synonym": "omnipresent, widespread",
+        "example": "The ubiquitous presence of smartphones has changed society."
+      },
+      {
+        "word": "somnolence",
+        "partOfSpeech": "Noun",
+        "meaning": "uykululuk, uykulu hal",
+        "synonym": "sleepiness, drowsiness",
+        "example": "Melatonin is responsible for inducing somnolence."
+      },
+      {
+        "word": "emit",
+        "partOfSpeech": "Verb",
+        "meaning": "yaymak, sızdırmak",
+        "synonym": "release, give off",
+        "example": "Digital screens emit blue light."
+      },
+      {
+        "word": "deceive",
+        "partOfSpeech": "Verb",
+        "meaning": "aldatmak, kandırmak",
+        "synonym": "mislead, trick",
+        "example": "The brain is effectively deceived into perceiving midnight as midday."
+      },
+      {
+        "word": "suppress",
+        "partOfSpeech": "Verb",
+        "meaning": "baskılamak, bastırmak",
+        "synonym": "inhibit, restrain",
+        "example": "Blue light suppresses the secretion of melatonin."
+      }
+    ],
+    "masterTechnique": "Biyolojik süreç anlatan metinlerde artış (increase)/azalış (decrease) ve varlık (presence)/yokluk (absence) zıtlıklarına dikkat et. ÖSYM bu zıtlıkları şıklarda sıklıkla takas eder.",
+    "sentenceAutopsy": {
+      "sentence": "When evening approaches, the absence of short-wavelength light signals the pineal gland to initiate the synthesis of melatonin, the hormone responsible for inducing somnolence.",
+      "focus": [
+        "When approaches (Zaman zarfı)",
+        "the absence of... (Cümlenin asıl öznesi)",
+        "signals ... to initiate (Sıklıkla sorulan yönlendirme yapısı)"
+      ]
+    },
+    "isPlaceholder": false
+  },
+  {
+    "id": "p02",
+    "title": "The Hidden Danger: Added Sugar",
+    "level": "Foundation",
+    "timeLimitMinutes": 6,
+    "strategy": "Identify added vs natural sugars, trace insulin resistance trigger mechanism.",
+    "passageText": "Unlike natural sugars found in whole fruits, added sugar in processed foods represents a significant threat to global cardiometabolic health. Sucrose and high-fructose corn syrup are chemically designed to enhance hyper-palatability, prompting excessive consumption. The liver metabolizes fructose directly, converting excesses into lipids via de novo lipogenesis. This process accumulates fat within liver cells, initiating a cascade of insulin resistance and systemic low-grade inflammation. Over time, the pancreas is forced to secrete increasingly higher volumes of insulin to maintain glycemic control, eventually exhausting its beta-cells. This physiological degradation paves the path for Type 2 diabetes and atherosclerotic cardiovascular disease. Thus, chronic consumption of processed foods functions as a slow cellular poison.",
+    "questions": [
+      {
+        "id": "p02-q1",
+        "prompt": "According to the text, what is the primary biological consequence of fructose excess in the liver?",
+        "options": [
+          "A) It instantly prompts the pancreas to reduce its natural insulin output.",
+          "B) It undergoes lipogenesis, generating lipid accumulations that trigger insulin resistance.",
+          "C) It gets converted into natural sugars that promote muscular recovery.",
+          "D) It selectively destroys the beta-cells of the pancreas within hours of consumption.",
+          "E) It prevents systemic inflammation by stabilizing cardiometabolic functions."
+        ],
+        "correctAnswer": "B",
+        "primaryDistractor": "D",
+        "explanation": "Metinde fruktozun karaciğerde de novo lipogeneze uğrayarak yağ birikimine ve bunun da insülin direncine yol açtığı belirtilmiştir. B seçeneği bunu tam karşılar. D şıkkı ise zaman sınırını abartır (Extreme/Time-limit hatası).",
+        "trapType": "Detail vs Main Idea"
+      }
+    ],
+    "vocabulary": [
+      {
+        "word": "cardiometabolic",
+        "partOfSpeech": "Adjective",
+        "meaning": "kalp ve metabolizma ile ilgili",
+        "synonym": "heart-metabolic",
+        "example": "Sugar causes severe cardiometabolic degradation."
+      },
+      {
+        "word": "lipogenesis",
+        "partOfSpeech": "Noun",
+        "meaning": "yağ oluşumu",
+        "synonym": "fat creation",
+        "example": "Excess fructose triggers hepatic lipogenesis."
+      },
+      {
+        "word": "exhaust",
+        "partOfSpeech": "Verb",
+        "meaning": "tüketmek, bitirmek",
+        "synonym": "deplete, drain",
+        "example": "Overproduction of insulin exhausts pancreatic beta-cells."
+      }
+    ],
+    "masterTechnique": "Kıyaslama (Unlike/Unlike natural sugars) yapılan yerleri iyi çiz. ÖSYM iki farklı kategorinin (örneğin added vs natural) özelliklerini şıklarda yer değiştirerek sorar.",
+    "sentenceAutopsy": {
+      "sentence": "The liver metabolizes fructose directly, converting excesses into lipids via de novo lipogenesis, which initiates insulin resistance.",
+      "focus": [
+        "converting excesses into (aktif kısaltma)",
+        "initiates (sonuç bildiren fiil)"
+      ]
+    },
+    "isPlaceholder": false
+  },
+  {
+    "id": "p03",
+    "title": "Walking: The Simplest Medicine",
+    "level": "Foundation",
+    "timeLimitMinutes": 6,
+    "strategy": "Focus on the low-intensity cardiorespiratory benefits and skeletal benefits.",
+    "passageText": "While high-intensity interval training dominates modern fitness trends, simple low-intensity physical activity like brisk walking remains the most robust demographic-wide health intervention. Clinical trials confirm that walking just thirty minutes daily enhances cardiorespiratory fitness, lowers blood pressure, and improves lipid profiles. Furthermore, walking is a weight-bearing exercise that stimulates osteoblast activity, thereby maintaining bone mineral density and preventing osteoporosis in aging populations. More importantly, walking promotes the release of brain-derived neurotrophic factor (BDNF), which directly stimulates neurogenesis and combats mild depression. Because it carries an exceptionally low injury risk, brisk walking is arguably the most scalable therapeutic modality available.",
+    "questions": [
+      {
+        "id": "p03-q1",
+        "prompt": "According to the passage, walking helps combat osteoporosis by:",
+        "options": [
+          "A) Releasing high amounts of brain-derived neurotrophic factors.",
+          "B) Restricting low-intensity cards to increase blood flow.",
+          "C) Functioning as a weight-bearing activity that stimulates osteoblast cells.",
+          "D) Completely replacing high-intensity interval training routines.",
+          "E) Lowering lipid profiles and stabilizing blood pressure naturally."
+        ],
+        "correctAnswer": "C",
+        "primaryDistractor": "A",
+        "explanation": "Metinde osteoporoza karşı 'weight-bearing exercise that stimulates osteoblast activity' denilerek C şıkkı desteklenmiştir. A seçeneği ise zihinsel faydalarıyla ilgilidir (Detail vs Detail tuzağı).",
+        "trapType": "Reference Trap"
+      }
+    ],
+    "vocabulary": [
+      {
+        "word": "robust",
+        "partOfSpeech": "Adjective",
+        "meaning": "güçlü, sağlam",
+        "synonym": "strong, durable",
+        "example": "Brisk walking remains a robust health intervention."
+      },
+      {
+        "word": "stimulate",
+        "partOfSpeech": "Verb",
+        "meaning": "uyarmak, tetiklemek",
+        "synonym": "arouse, trigger",
+        "example": "Walking stimulates osteoblast activity in bones."
+      },
+      {
+        "word": "scalable",
+        "partOfSpeech": "Adjective",
+        "meaning": "ölçeklenebilir, genişletilebilir",
+        "synonym": "adaptable, expandable",
+        "example": "Walking is a highly scalable health modality."
+      }
+    ],
+    "masterTechnique": "Kardiyovasküler fayda ile zihinsel faydayı (BDNF) ayırt et. İlgisiz faydaları birleştirip sebep-sonuç ilişkisi kuran şıklar her zaman güçlü çeldiricidir.",
+    "sentenceAutopsy": {
+      "sentence": "Because it carries an exceptionally low injury risk, brisk walking is arguably the most scalable therapeutic modality available.",
+      "focus": [
+        "Because (sebep bağlacı)",
+        "arguably (olasılık belirten zarf)"
+      ]
+    },
+    "isPlaceholder": false
+  },
+  {
+    "id": "p04",
+    "title": "Bacteria vs. Virus: Understanding the Difference",
+    "level": "Foundation",
+    "timeLimitMinutes": 6,
+    "strategy": "Differentiate biological structures: independent living cells vs. parasitic genetic capsules.",
+    "passageText": "A critical error in public health literacy is the inability to distinguish between bacterial and viral pathogens. Bacteria are unicellular, free-living prokaryotic organisms containing their own cellular machinery for metabolism and replication. They can thrive in diverse environments and reproduce independently. Conversely, viruses are sub-microscopic, non-living infectious agents consisting solely of a nucleic acid core wrapped in a protein coat. Lacking metabolic apparatus, viruses are obligate intracellular parasites; they can only replicate by hijacking the biochemical synthesis pipelines of a host cell. Because of these fundamental structural differences, antibiotics—which target bacterial cell walls or metabolic enzymes—are completely ineffective against viral infections. Misprescribing antibiotics for viral illnesses accelerates global bacterial resistance.",
+    "questions": [
+      {
+        "id": "p04-q1",
+        "prompt": "Which of the following describes a key distinction between bacteria and viruses?",
+        "options": [
+          "A) Bacteria consist solely of nucleic acids, whereas viruses contain cell walls.",
+          "B) Viruses can thrive in diverse environments, while bacteria require host cells to live.",
+          "C) Bacteria are independent prokaryotic organisms, while viruses lack cell machinery and must host-hijack.",
+          "D) Antibiotics are highly effective against viral structures but useless against bacteria.",
+          "E) Bacteria reproduce only by wrapping their core in specialized protein coats."
+        ],
+        "correctAnswer": "C",
+        "primaryDistractor": "A",
+        "explanation": "Metinde bakterilerin bağımsız prokaryot canlılar olduğu, virüslerin ise hücresel yapıdan yoksun olup konak hücreyi ele geçirerek çoğalabildiği belirtilmiştir. C seçeneği bu farkı tam yansıtır. A şıkkı ise özellikleri tam tersine çevirmiştir (Reversal trap).",
+        "trapType": "Reversal"
+      }
+    ],
+    "vocabulary": [
+      {
+        "word": "pathogen",
+        "partOfSpeech": "Noun",
+        "meaning": "hastalık yapıcı mikrop",
+        "synonym": "infectious agent, microbe",
+        "example": "Both bacteria and viruses can act as human pathogens."
+      },
+      {
+        "word": "intracellular",
+        "partOfSpeech": "Adjective",
+        "meaning": "hücre içi",
+        "synonym": "inside the cell",
+        "example": "Viruses are obligate intracellular parasites."
+      },
+      {
+        "word": "hijack",
+        "partOfSpeech": "Verb",
+        "meaning": "gasp etmek, ele geçirmek",
+        "synonym": "seize, capture",
+        "example": "Viruses hijack host cellular pathways to replicate."
+      }
+    ],
+    "masterTechnique": "ÖSYM'nin en çok sevdiği şey karşılaştırma metinlerinde 'bakterinin özelliğini virüse, virüsünkini bakteriye' vererek Reversal (terslik) tuzağı kurmaktır.",
+    "sentenceAutopsy": {
+      "sentence": "Antibiotics—which target bacterial cell walls or metabolic enzymes—are completely ineffective against viral infections.",
+      "focus": [
+        "which (ara söz, bakteriyi tanımlıyor)",
+        "completely ineffective (kesinlik belirten sıfat tamlaması)"
+      ]
+    },
+    "isPlaceholder": false
+  },
+  {
+    "id": "p05",
+    "title": "Hydration Myths: Do You Need 8 Glasses?",
+    "level": "Foundation",
+    "timeLimitMinutes": 6,
+    "strategy": "Identify the origins of the hydration myth and locate actual biological homeostatic feedback triggers.",
+    "passageText": "The pervasive health dogma that every individual requires exactly eight glasses of water daily is largely a scientific myth. The origin of this guidance stems from a 1945 recommendation that estimated average water requirement at 2.5 liters, yet overlooked a vital qualifier: most of this volume is already contained in daily food, fruits, tea, and coffee. Human hydration is controlled by an extremely sophisticated homeostatic feedback system involving the hypothalamus, kidneys, and antidiuretic hormone (ADH). When blood osmolality rises, the brain signals thirst, prompting fluid intake. Forcing excess water consumption offers no metabolic benefit and can even dilute blood sodium levels to dangerous extremes, a condition known as hyponatremia. Thus, listening to natural thirst is biologically superior to arbitrary numerical formulas.",
+    "questions": [
+      {
+        "id": "p05-q1",
+        "prompt": "According to the passage, the 8-glass water rule overlooked which crucial detail?",
+        "options": [
+          "A) The hypothalamus is incapable of regulating blood osmolality under pressure.",
+          "B) Antidiuretic hormones are only released during extreme dehydration.",
+          "C) A significant portion of water requirements is already met through daily foods and other fluids.",
+          "D) Excessive hydration directly initiates diabetic liver conditions.",
+          "E) Numerical formulas are the only scientifically validated way to prevent hyponatremia."
+        ],
+        "correctAnswer": "C",
+        "primaryDistractor": "E",
+        "explanation": "Metinde 1945'teki tavsiyenin, su ihtiyacının çoğunun zaten günlük besinler ve diğer sıvılar tarafından karşılandığı gerçeğini ('most of this volume is already contained in daily food, fruits...') gözden kaçırdığı belirtilmiştir. C seçeneği bunu doğrular.",
+        "trapType": "Detail vs Main Idea"
+      }
+    ],
+    "vocabulary": [
+      {
+        "word": "pervasive",
+        "partOfSpeech": "Adjective",
+        "meaning": "yaygın, her tarafa yayılmış",
+        "synonym": "widespread, dominant",
+        "example": "The pervasive belief about 8 glasses of water is a myth."
+      },
+      {
+        "word": "osmolality",
+        "partOfSpeech": "Noun",
+        "meaning": "yoğunluk (sıvıların)",
+        "synonym": "concentration",
+        "example": "The hypothalamus detects shifts in blood osmolality."
+      },
+      {
+        "word": "arbitrary",
+        "partOfSpeech": "Adjective",
+        "meaning": "keyfi, rastgele",
+        "synonym": "random, subjective",
+        "example": "Listening to thirst is safer than arbitrary numerical rules."
+      }
+    ],
+    "masterTechnique": "Yet (ancak), yet overlooked a vital qualifier... ifadesinin arkasındaki cümleyi çok iyi oku. Cümle ortasındaki zıtlık bağlaçları sorunun can damarıdır.",
+    "sentenceAutopsy": {
+      "sentence": "Forcing excess water consumption offers no metabolic benefit and can even dilute blood sodium levels to dangerous extremes.",
+      "focus": [
+        "no metabolic benefit (kesin olumsuz ifade)",
+        "dangerous extremes (aşırı uçları niteleme)"
+      ]
+    },
+    "isPlaceholder": false
+  },
+  {
+    "id": "p06",
+    "title": "Antibiotic Resistance: A Growing Crisis",
+    "level": "Intermediate",
+    "timeLimitMinutes": 8,
+    "strategy": "Analyze the evolutionary mechanism of selection pressure in bacterial colonies.",
+    "passageText": "The rapid emergence of multi-drug resistant bacterial strains is widely classified as one of the preeminent clinical threats of the twenty-first century. This crisis is fueled by the misuse of antimicrobial therapies in human clinical environments and agricultural farming. When a population of bacteria is exposed to sublethal concentrations of an antibiotic, a strong evolutionary selection pressure is applied. While sensitive bacteria perish, those possessing pre-existing genetic mutations enabling resistance survive. These resilient organisms then rapidly proliferate, passing their resistance genes through vertical reproduction. Furthermore, bacteria can exchange genetic material horizontally via plasmids, transmitting resistance characteristics across completely different species. Consequently, infections that were easily treatable with penicillin in the mid-twentieth century are now evolving into lethal, untreatable clinical challenges. Without rapid investment in novel molecular classes, we risk regressing to a pre-antibiotic dark age of medicine.",
+    "questions": [
+      {
+        "id": "p06-q1",
+        "prompt": "The passage implies that sublethal exposure to antibiotics accelerates resistance because:",
+        "options": [
+          "A) It actively mutates sensitive bacteria to make them stronger within seconds.",
+          "B) It eliminates weaker cells, creating selection pressure that allows pre-mutated resistant cells to survive and proliferate.",
+          "C) It completely halts horizontal gene transfer, allowing plasmid accumulation.",
+          "D) It converts the drugs into metabolic nutrients that feed bacterial colonies.",
+          "E) It causes the human immune system to stop producing white blood cells."
+        ],
+        "correctAnswer": "B",
+        "primaryDistractor": "A",
+        "explanation": "Metinde hassas bakterilerin öldüğü, önceden mutasyona uğramış dirençli bakterilerin ise hayatta kalıp çoğaldığı ve seçilim baskısı (selection pressure) oluştuğu belirtilmiştir. B seçeneği bu süreci tam açıklar. A şıkkı ise süreyi 'seconds' (saniyeler) diyerek abartır ve aktif mutasyona uğrattığını iddia eder (Reversal/Extreme).",
+        "trapType": "Extreme Words"
+      }
+    ],
+    "vocabulary": [
+      {
+        "word": "preeminent",
+        "partOfSpeech": "Adjective",
+        "meaning": "üstün, önde gelen",
+        "synonym": "outstanding, leading",
+        "example": "Antibiotic resistance is a preeminent global health threat."
+      },
+      {
+        "word": "proliferate",
+        "partOfSpeech": "Verb",
+        "meaning": "hızla çoğalmak, üremek",
+        "synonym": "multiply, reproduce rapidly",
+        "example": "Resilient bacteria proliferate rapidly after selection pressure."
+      },
+      {
+        "word": "horizontal",
+        "partOfSpeech": "Adjective",
+        "meaning": "yatay",
+        "synonym": "flat, lateral",
+        "example": "Bacteria transfer plasmids horizontally to other species."
+      }
+    ],
+    "masterTechnique": "Horizontal (yatay) ve Vertical (dikey) üreme farklarını ÖSYM sıklıkla kafa karıştırmak için takas eder. Farklı kelime çiftlerine dikkat edin.",
+    "sentenceAutopsy": {
+      "sentence": "Without rapid investment in novel molecular classes, we risk regressing to a pre-antibiotic dark age of medicine.",
+      "focus": [
+        "Without (olumsuz şart yapısı)",
+        "risk regressing (olasılık ve yönelim)"
+      ]
+    },
+    "isPlaceholder": false
+  },
+  {
+    "id": "p07",
+    "title": "The Placebo Effect: Mind Over Matter",
+    "level": "Intermediate",
+    "timeLimitMinutes": 8,
+    "strategy": "Differentiate between psychological belief and genuine biological response pathways.",
+    "passageText": "For decades, clinical science regarded the placebo effect as a mere nuisance—a subjective illusion of healing that occurred because patients wanted to feel better. However, modern neuroimaging studies have fundamentally shattered this paradigm, revealing that placebos can trigger robust and measurable biological neurochemistry. When a patient believes they are receiving an active analgesic, their prefrontal cortex activates. This cognitive state triggers the descending pain-control system, stimulating the release of endogenous opioids (endorphins) and dopamine in the spinal cord. In essence, expectation translates directly into physical cellular signaling. This phenomenon demonstrates that the brain possesses a highly structured inner pharmacy, capable of modulating physical pain and inflammatory responses through pure cognitive anticipation. Thus, psychological belief is actually a chemical actuator.",
+    "questions": [
+      {
+        "id": "p07-q1",
+        "prompt": "According to neuroimaging studies mentioned in the text, how does a placebo influence physical pain?",
+        "options": [
+          "A) By physically removing the peripheral pain source completely.",
+          "B) By triggering the prefrontal cortex to stimulate the release of endogenous opioids.",
+          "C) By permanently disabling the spinal cord's neural connections.",
+          "D) By forcing patients to subjective illusions that ignore actual bleeding.",
+          "E) By decreasing the level of natural dopamine inside the brain."
+        ],
+        "correctAnswer": "B",
+        "primaryDistractor": "A",
+        "explanation": "Metinde yer alan nörogörüntüleme çalışmalarına göre placebonun, prefrontal korteksi uyararak 'endogenous opioids' (doğal opioidler) ve dopamin salgılatıp ağrı kontrol sistemini aktive ettiği belirtilmiştir. B şıkkı bunu doğrular.",
+        "trapType": "Detail vs Main Idea"
+      }
+    ],
+    "vocabulary": [
+      {
+        "word": "analgesic",
+        "partOfSpeech": "Noun",
+        "meaning": "ağrı kesici ilaç",
+        "synonym": "painkiller",
+        "example": "The patient thought they received a powerful analgesic."
+      },
+      {
+        "word": "endogenous",
+        "partOfSpeech": "Adjective",
+        "meaning": "vücut içi üretilen, içsel",
+        "synonym": "internal, organic",
+        "example": "Endorphins are endogenous opioids."
+      },
+      {
+        "word": "modulate",
+        "partOfSpeech": "Verb",
+        "meaning": "düzenlemek, ayarlamak",
+        "synonym": "regulate, adjust",
+        "example": "The brain modulates physical pain through expectation."
+      }
+    ],
+    "masterTechnique": "Paradigm shift (paradigmanın yıkılması/değişmesi) cümleleri ÖSYM'nin en sevdiği paragraf kalıbıdır. 'Düne kadar ne biliniyordu, bugün ne doğrulandı' mukayesesine odaklanın.",
+    "sentenceAutopsy": {
+      "sentence": "Expectation translates directly into physical cellular signaling, indicating that psychological belief is actually a chemical actuator.",
+      "focus": [
+        "translates directly into (dönüşüm bildiren fiil)",
+        "chemical actuator (niteleme yapısı)"
+      ]
+    },
+    "isPlaceholder": false
+  },
+  {
+    "id": "p08",
+    "title": "Herd Immunity: Protecting the Community",
+    "level": "Intermediate",
+    "timeLimitMinutes": 8,
+    "strategy": "Identify the critical immunization percentage threshold and trace the secondary protection afforded to the vulnerable.",
+    "passageText": "Herd immunity occurs when a critical threshold of a population becomes immune to an infectious disease, thereby limiting transmission vectors and indirectly protecting individuals who lack immunity. Achieving this state requires either widespread natural infection or high vaccination rates. For highly contagious pathogens like measles, the immunization threshold is extremely high, demanding rigorous public adherence to immunization protocols. When the threshold is met, the chain of transmission is broken, and the pathogen cannot find enough susceptible hosts to sustain its spread. This indirect protection is crucial for vulnerable subpopulations, such as newborns, elderly individuals, or immunodeficient patients, who cannot receive vaccines. However, if vaccine hesitancy drives immunization rates below the critical threshold, herd immunity collapses, leading to resurgent outbreaks of previously controlled illnesses.",
+    "questions": [
+      {
+        "id": "p08-q1",
+        "prompt": "According to the text, how does herd immunity indirectly protect vulnerable individuals?",
+        "options": [
+          "A) By directly transferring antibodies from immunized adults to newborns through physical contact.",
+          "B) By breaking the chain of transmission when a critical percentage is immune, preventing pathogens from spreading easily.",
+          "C) By guaranteeing that no virus can ever mutate again once vaccination begins.",
+          "D) By forcing unvaccinated individuals to stay in sterile medical environments perpetually.",
+          "E) By stimulating natural hormone synthesis that makes elderly people immune to all infections."
+        ],
+        "correctAnswer": "B",
+        "primaryDistractor": "A",
+        "explanation": "Metinde belirtilen 'the chain of transmission is broken, and the pathogen cannot find enough susceptible hosts...' ifadesi B seçeneğini doğrular. A seçeneği metinden çıkarılamaz ve yanlıştır (Reference Trap).",
+        "trapType": "Detail vs Main Idea"
+      },
+      {
+        "id": "p08-q2",
+        "prompt": "Based on the passage, highly contagious pathogens like measles require:",
+        "options": [
+          "A) A complete avoidance of synthetic vaccinations to trigger natural herd immunity.",
+          "B) A significantly higher percentage of population immunization compared to less contagious pathogens.",
+          "C) Direct treatment of newborns with experimental endonucleases.",
+          "D) No immunization thresholds because they replicate exclusively in clinical settings.",
+          "E) Constant updates to dietary sodium levels to avoid system breakdowns."
+        ],
+        "correctAnswer": "B",
+        "primaryDistractor": "A",
+        "explanation": "Metinde 'highly contagious pathogens like measles, the immunization threshold is extremely high' ifadesi B seçeneğinin doğru olduğunu gösterir. Kontajyözlüğü yüksek hastalıklar daha yüksek eşik gerektirir. A şıkkı ise tam tersini iddia eder (Reversal).",
+        "trapType": "Cause-Effect Confusion"
+      },
+      {
+        "id": "p08-q3",
+        "prompt": "The author warns that herd immunity is threatened primarily by which of the following?",
+        "options": [
+          "A) Excessive public reliance on physical exercise instead of clinical medicine.",
+          "B) The complete eradication of municipal water purification systems.",
+          "C) A decline in immunization rates driven by public hesitation towards vaccines.",
+          "D) Rapid mutations that instantly convert standard viruses into unicellular bacteria.",
+          "E) The lack of high-definition video feeds in remote rural medical centers."
+        ],
+        "correctAnswer": "C",
+        "primaryDistractor": "D",
+        "explanation": "Metnin son cümlesindeki 'if vaccine hesitancy drives immunization rates below the critical threshold, herd immunity collapses...' ifadesi C seçeneğini destekler. D şıkkı ise biyolojik olarak hatalı ve metin dışı bir iddiadır.",
+        "trapType": "Extreme Words"
+      }
+    ],
+    "vocabulary": [
+      {
+        "word": "threshold",
+        "partOfSpeech": "Noun",
+        "meaning": "eşik, sınır değer",
+        "synonym": "boundary, limit",
+        "example": "The immunization threshold is extremely high."
+      },
+      {
+        "word": "vector",
+        "partOfSpeech": "Noun",
+        "meaning": "taşıyıcı, bulaşma vasıtası",
+        "synonym": "carrier, transmitter",
+        "example": "limit transmission vectors"
+      },
+      {
+        "word": "susceptible",
+        "partOfSpeech": "Adjective",
+        "meaning": "savunmasız, hassas, kolay etkilenen",
+        "synonym": "vulnerable, sensitive",
+        "example": "cannot find enough susceptible hosts"
+      }
+    ],
+    "masterTechnique": "Sayısal veya oransal ifadelerin (threshold, critical percentage) geçtiği yerlere dikkat edin. ÖSYM, bu sınır değerlerin 'her koşulda aynı' olduğunu iddia eden genelleme şıklarını çeldirici yapar.",
+    "sentenceAutopsy": {
+      "sentence": "This indirect protection is crucial for vulnerable subpopulations, such as newborns, elderly individuals, or immunodeficient patients, who cannot receive vaccines.",
+      "focus": [
+        "This indirect protection (Cümlenin asıl öznesi ve bağlantı zamiri)",
+        "such as (Örneklendirme yapısı)",
+        "who cannot receive (Açıklayıcı sıfat cümleciği, kısıt tanımlıyor)"
+      ]
+    },
+    "isPlaceholder": false
+  },
+  {
+    "id": "p09",
+    "title": "Mental Health: Stigma vs. Science",
+    "level": "Intermediate",
+    "timeLimitMinutes": 8,
+    "strategy": "Locate the shift from moral failing models to modern neurobiological and neuroplastic etiologies.",
+    "passageText": "The transition of mental health from a moral failing to a neurobiological science has dramatically altered modern psychiatric interventions. Historical social stigmas often isolated patients with depressive disorders, attributing their symptoms to weakness of character. Today, neuroscience identifies specific synaptic signaling disruptions, receptor density variations, and neuroplasticity deficits as primary targets for pharmacological and behavioral therapies. For instance, chronic stress is known to cause atrophy in the prefrontal cortex and hippocampus, which are crucial for emotion regulation. By framing psychiatric disorders as biological anomalies rather than character flaws, clinical science has not only advanced drug development but also destigmatized therapy. Nonetheless, the intersection of genetic predisposition and environmental triggers underscores that mental illness remains a complex, multi-layered pathology requiring personalized care.",
+    "questions": [
+      {
+        "id": "p09-q1",
+        "prompt": "According to the passage, historical social stigmas regarding mental illness resulted from:",
+        "options": [
+          "A) An early clinical understanding of synaptic receptor density variations.",
+          "B) Attributing psychiatric symptoms to weaknesses of character rather than physical biological causes.",
+          "C) A total absence of pharmacological interventions in the early twenty-first century.",
+          "D) Rapid cell divisions that permanently damaged the hippocampus.",
+          "E) The public's inability to access high-definition video consultations."
+        ],
+        "correctAnswer": "B",
+        "primaryDistractor": "A",
+        "explanation": "Metinde 'stigma often isolated patients... attributing symptoms to weakness of character' denilmiştir. Dolayısıyla B seçeneği doğrudur. A seçeneği ise günümüz nörobilimsel bulgusudur (Reversal/Chronology hatası).",
+        "trapType": "Cause-Effect Confusion"
+      },
+      {
+        "id": "p09-q2",
+        "prompt": "The text states that modern neuroscience targets which of the following to treat depressive disorders?",
+        "options": [
+          "A) Recommending absolute social isolation for anyone experiencing mild stress.",
+          "B) Specific synaptic disruptions, receptor variations, and neuroplasticity deficits.",
+          "C) The complete permanent surgical removal of the hippocampus.",
+          "D) Reversing natural solar illumination cycles via high-energy visible diodes.",
+          "E) Eliminating the user's genetic code completely within hours."
+        ],
+        "correctAnswer": "B",
+        "primaryDistractor": "C",
+        "explanation": "Metinde 'neuroscience identifies specific synaptic signaling disruptions, receptor density variations, and neuroplasticity deficits as primary targets...' denilmektedir. B seçeneği bunu doğrudan yansıtır. C şıkkı ise aşırı yıkıcı bir yöntemdir (Extreme Words).",
+        "trapType": "Detail vs Main Idea"
+      },
+      {
+        "id": "p09-q3",
+        "prompt": "What can be inferred about the complexity of mental illness based on the passage?",
+        "options": [
+          "A) It is a simplistic condition that can be fully cured by a single arbitrary dose of antibiotics.",
+          "B) It is solely determined by genetic factors, completely bypassing environmental triggers.",
+          "C) It is a multi-layered condition influenced by both genetic predisposition and environmental triggers.",
+          "D) It remains untreatable because clinical science has abandoned psychological therapy.",
+          "E) It has no correlation with emotional regulation or prefrontal cortex health."
+        ],
+        "correctAnswer": "C",
+        "primaryDistractor": "B",
+        "explanation": "Son cümledeki 'intersection of genetic predisposition and environmental triggers... multi-layered pathology' ifadesinden C seçeneği doğrudan çıkarılabilir. B seçeneğindeki 'solely' ifadesi bir Extreme Words tuzağıdır.",
+        "trapType": "Extreme Words"
+      }
+    ],
+    "vocabulary": [
+      {
+        "word": "stigma",
+        "partOfSpeech": "Noun",
+        "meaning": "leke, yafta, toplumsal utanç",
+        "synonym": "shame, disgrace",
+        "example": "Historical social stigmas isolated patients."
+      },
+      {
+        "word": "atrophy",
+        "partOfSpeech": "Noun",
+        "meaning": "körelme, hacimsel gerileme, erime",
+        "synonym": "wasting away, degeneration",
+        "example": "Stress causes atrophy in the hippocampus."
+      },
+      {
+        "word": "predisposition",
+        "partOfSpeech": "Noun",
+        "meaning": "yatkınlık, eğilim",
+        "synonym": "susceptibility, tendency",
+        "example": "the intersection of genetic predisposition and environmental triggers"
+      }
+    ],
+    "masterTechnique": "Zıtlık belirten 'rather than' yapısına çok dikkat edin. ÖSYM, 'rather than' ile ayrılan iki kavramın (biological anomaly vs character flaw) rollerini değiştirip yanlış şıklar üretir.",
+    "sentenceAutopsy": {
+      "sentence": "By framing psychiatric disorders as biological anomalies rather than character flaws, clinical science has destigmatized therapy.",
+      "focus": [
+        "By framing (Yöntem belirten 'by + Ving' yapısı)",
+        "as biological anomalies (Niteleme kalıbı)",
+        "rather than (Zıtlık ve tercih bağlacı)"
+      ]
+    },
+    "isPlaceholder": false
+  },
+  {
+    "id": "p10",
+    "title": "Telemedicine: The Doctor is Online",
+    "level": "Intermediate",
+    "timeLimitMinutes": 8,
+    "strategy": "Contrast the accessibility and efficiency advantages with clinical palpation and diagnostic limitations.",
+    "passageText": "The integration of digital communication technologies into clinical practices has given rise to telemedicine, bridging geographic gaps between rural patients and specialized care centers. While virtual consultations improve clinical logistics, reduce travel costs, and enhance patient compliance, they also present challenges regarding diagnostic accuracy due to the absence of physical palpation and hands-on examinations. Clinicians must rely heavily on patient-reported symptoms and high-definition video feeds to assess physical signs. This restriction makes some acute conditions, such as internal abdominal tenderness, difficult to evaluate remotely. Consequently, while telemedicine is highly effective for triaging, chronic disease monitoring, and mental health consultations, it cannot completely replace traditional in-person clinical diagnostics. The future of healthcare likely lies in a hybrid model that maximizes convenience without compromising diagnostic safety.",
+    "questions": [
+      {
+        "id": "p10-q1",
+        "prompt": "Based on the passage, what is a primary limitation of virtual consultations?",
+        "options": [
+          "A) They completely eliminate the possibility of any patient compliance.",
+          "B) The absence of physical palpation and hands-on examinations, which can impact diagnostic accuracy.",
+          "C) They significantly increase travel costs for rural populations.",
+          "D) They are completely ineffective for triaging and chronic disease monitoring.",
+          "E) They prevent doctors from receiving any verbal feedback from patients."
+        ],
+        "correctAnswer": "B",
+        "primaryDistractor": "D",
+        "explanation": "Metinde 'absence of physical palpation and hands-on examinations' ifadesinin tanı doğruluğunu zorlaştırabileceği ('challenges regarding diagnostic accuracy') belirtilmiştir. Dolayısıyla B doğrudur. D seçeneği ise tam tersidir.",
+        "trapType": "Reversal"
+      },
+      {
+        "id": "p10-q2",
+        "prompt": "According to the author, telemedicine is particularly suited for which clinical tasks?",
+        "options": [
+          "A) Eliminating the need for all physical hospital buildings globally.",
+          "B) Triaging, monitoring chronic diseases, and mental health consultations.",
+          "C) Performing emergency internal organ transplants remotely.",
+          "D) Resolving underlying genetic predispositions through high-definition videos.",
+          "E) Replacing traditional diagnostics completely within days."
+        ],
+        "correctAnswer": "B",
+        "primaryDistractor": "C",
+        "explanation": "Metinde 'telemedicine is highly effective for triaging, chronic disease monitoring, and mental health consultations' denilmektedir. B seçeneği bunu doğrudan ifade eder. C seçeneği aşırı ve hatalıdır.",
+        "trapType": "Detail vs Main Idea"
+      },
+      {
+        "id": "p10-q3",
+        "prompt": "Which of the following best describes the author's attitude towards the future of clinical medicine?",
+        "options": [
+          "A) Extremely hostile, advocating for the immediate ban of all digital medical tools.",
+          "B) Indifferent, suggesting that healthcare will naturally phase out without intervention.",
+          "C) Supportive of a hybrid model that combines virtual convenience with diagnostic safety.",
+          "D) Highly critical, arguing that virtual consultations have completely ruined global health.",
+          "E) Overly optimistic, claiming that virtual screens will cure all known illnesses."
+        ],
+        "correctAnswer": "C",
+        "primaryDistractor": "E",
+        "explanation": "Metnin son cümlesindeki 'The future... lies in a hybrid model that maximizes convenience without compromising diagnostic safety' ifadesi yazarın dengeli ve destekleyici bir yaklaşımda (C) olduğunu gösterir. E şıkkı ise abartılı bir iyimserliktir (Tone Misread).",
+        "trapType": "Tone Misread"
+      }
+    ],
+    "vocabulary": [
+      {
+        "word": "bridge",
+        "partOfSpeech": "Verb",
+        "meaning": "köprü kurmak, farkı kapatmak",
+        "synonym": "span, close",
+        "example": "bridging geographic gaps between patients and care"
+      },
+      {
+        "word": "palpation",
+        "partOfSpeech": "Noun",
+        "meaning": "dokunarak muayene etme",
+        "synonym": "physical touch, feeling",
+        "example": "absence of physical palpation"
+      },
+      {
+        "word": "triage",
+        "partOfSpeech": "Noun",
+        "meaning": "triyaj, aciliyet derecelendirmesi",
+        "synonym": "sorting patients",
+        "example": "highly effective for triaging"
+      }
+    ],
+    "masterTechnique": "Artı/Eksi (Advantages/Disadvantages) dengesini kurun. Paragrafın ilk yarısında övülen bir teknolojinin ikinci yarıda gelen 'while/however' ile sınırlandırıldığını görmek kritik soruları çözdürür.",
+    "sentenceAutopsy": {
+      "sentence": "While virtual consultations improve clinical logistics and patient compliance, they also present challenges regarding diagnostic accuracy due to the absence of physical palpation.",
+      "focus": [
+        "While (Zıtlık bağlacı)",
+        "improve clinical logistics (Artı yön)",
+        "they also present challenges (Eksi yön)",
+        "due to the absence of (Sebep bildiren yapı)"
+      ]
+    },
+    "isPlaceholder": false
+  },
+  {
+    "id": "p11",
+    "title": "CRISPR and the Ethics of Gene Editing",
+    "level": "Advanced",
+    "timeLimitMinutes": 10,
+    "strategy": "Observe the fine line between therapeutic correction of genetic defects and cosmetic enhancement.",
+    "passageText": "The development of CRISPR-Cas9 technology has granted humanity unprecedented capacity to edit eukaryotic genomes with surgical precision. By utilizing a guide RNA to direct the Cas9 endonuclease to a specific DNA sequence, scientists can induce double-stranded breaks and introduce targeted genetic alterations. While this molecular tool holds the promise of eradicating monogenic hereditary diseases, such as cystic fibrosis and sickle-cell anemia, it also ignites fierce bioethical debates. The dividing line between therapeutic gene correction in somatic cells and speculatively dangerous genetic enhancements in germline cells remains highly contentious. Germline edits are heritable, meaning any alterations would be passed to future generations, permanently modifying the human gene pool. Critics warn of 'designer babies' and exacerbated social inequalities, whereas proponents argue that banning germline research is a disservice to future generations suffering from incurable genetic illnesses.",
+    "questions": [
+      {
+        "id": "p11-q1",
+        "prompt": "According to the text, what makes germline editing far more bioethically contentious than somatic cell editing?",
+        "options": [
+          "A) Germline edits are heritable and permanently alter the gene pool for future generations.",
+          "B) Somatic cell editing is completely illegal in all developed countries.",
+          "C) Germline editing is technically much simpler and requires no guide RNA.",
+          "D) Somatic cells always self-destruct immediately after receiving edits.",
+          "E) Germline edits are completely ineffective at curing any disease."
+        ],
+        "correctAnswer": "A",
+        "primaryDistractor": "B",
+        "explanation": "Metinde 'Germline edits are heritable, meaning any alterations would be passed to future generations, permanently modifying the human gene pool' denilerek bu farklılık vurgulanmıştır. Somatik hücrelerin yasa dışılığı ile ilgili bir bilgi yoktur.",
+        "trapType": "Extreme Words"
+      },
+      {
+        "id": "p11-q2",
+        "prompt": "How does the CRISPR-Cas9 system locate and modify specific genes?",
+        "options": [
+          "A) It relies on random molecular collisions without any target DNA sequence.",
+          "B) It utilizes a guide RNA to direct the Cas9 endonuclease to the target DNA sequence.",
+          "C) It floods the cell with glucose until the DNA strands dissolve naturally.",
+          "D) It requires in-person clinical palpation to locate active genes.",
+          "E) It permanently disables all neurotransmitter receptors in the cell."
+        ],
+        "correctAnswer": "B",
+        "primaryDistractor": "A",
+        "explanation": "Metinde 'By utilizing a guide RNA to direct the Cas9 endonuclease to a specific DNA sequence, scientists can... introduce targeted genetic alterations' denilmiştir. B seçeneği bunu tam doğrular.",
+        "trapType": "Reversal"
+      },
+      {
+        "id": "p11-q3",
+        "prompt": "Proponents of germline editing argue that restricting or banning this research:",
+        "options": [
+          "A) Will automatically end all global socioeconomic inequalities.",
+          "B) Is a disservice to future generations who will suffer from incurable genetic illnesses.",
+          "C) Is highly recommended because somatic cell edits are totally useless.",
+          "D) Will prevent cancer cells from using telomerase for replicative immortality.",
+          "E) Will instantly cure cystic fibrosis and sickle-cell anemia."
+        ],
+        "correctAnswer": "B",
+        "primaryDistractor": "A",
+        "explanation": "Metnin sonundaki 'proponents argue that banning germline research is a disservice to future generations suffering from incurable genetic illnesses' ifadesi B şıkkını doğrular. A seçeneği ise eleştirmenlerin endişesidir (Reversal).",
+        "trapType": "Tone Misread"
+      }
+    ],
+    "vocabulary": [
+      {
+        "word": "unprecedented",
+        "partOfSpeech": "Adjective",
+        "meaning": "eşi benzeri görülmemiş, emsalsiz",
+        "synonym": "unrivaled, groundbreaking",
+        "example": "unprecedented capacity to edit genomes"
+      },
+      {
+        "word": "heritable",
+        "partOfSpeech": "Adjective",
+        "meaning": "kalıtsal, nesilden nesile aktarılabilir",
+        "synonym": "inherited, transmissible",
+        "example": "Germline edits are heritable."
+      },
+      {
+        "word": "exacerbate",
+        "partOfSpeech": "Verb",
+        "meaning": "kötüleştirmek, şiddetlendirmek",
+        "synonym": "worsen, aggravate",
+        "example": "exacerabated social inequalities"
+      }
+    ],
+    "masterTechnique": "Advanced metinlerde geçen teknik mekanizmaları (guide RNA, endonuclease) kelimesi kelimesine anlamaya çalışarak zaman kaybetmeyin. Önemli olan bu mekanizmanın amacını ve yarattığı biyotıp etiği tartışmasını kavramaktır.",
+    "sentenceAutopsy": {
+      "sentence": "The dividing line between therapeutic gene correction in somatic cells and speculatively dangerous genetic enhancements in germline cells remains highly contentious.",
+      "focus": [
+        "The dividing line between A and B (Karşılaştırma sınırı)",
+        "therapeutic correction (Olumlu niteleme)",
+        "speculatively dangerous (Yazarın yorumu ve olasılık)",
+        "remains highly contentious (Durum bildiren yüklem)"
+      ]
+    },
+    "isPlaceholder": false
+  },
+  {
+    "id": "p12",
+    "title": "Pandemics: The Challenge of Asymptomatic Spread",
+    "level": "Advanced",
+    "timeLimitMinutes": 10,
+    "strategy": "Identify epidemiological control vectors and follow how silent transmission bypasses typical containment.",
+    "passageText": "Asymptomatic transmission represents the ultimate epidemiological challenge, rendering standard public screening methods like temperature checks and symptom diaries utterly ineffective. Pathogens that replicate silently in the upper respiratory tract can be shed in high volumes by individuals who exhibit no clinical distress, fueling exponential infection curves before public health agencies can identify outbreaks. Because these carriers feel perfectly healthy, they continue their daily routines, interacting socially and unknowingly seeding viral clusters. This silent dissemination is particularly dangerous in closed environments like hospitals and nursing homes. Epidemiologists argue that controlling such pathogens requires proactive surveillance, random diagnostic testing, and universal masking rather than reactive symptom-based isolation. Without these measures, a virus with high asymptomatic shedding can easily bypass traditional quarantine walls, transforming a localized outbreak into a global pandemic.",
+    "questions": [
+      {
+        "id": "p12-q1",
+        "prompt": "Why are standard temperature checks and symptom diaries described as 'utterly ineffective' against certain pathogens?",
+        "options": [
+          "A) Because they utilize low-definition video feeds that are technically flawed.",
+          "B) Because carriers replicate and shed the virus silently without exhibiting any detectable clinical symptoms.",
+          "C) Because the kidneys automatically suppress the antidiuretic hormone.",
+          "D) Because antibiotics completely destroy viral capsids within seconds.",
+          "E) Because they are only designed to detect bacterial cell walls in clinical labs."
+        ],
+        "correctAnswer": "B",
+        "primaryDistractor": "E",
+        "explanation": "Metinde 'pathogens that replicate silently... by individuals who exhibit no clinical distress' denilerek, belirti göstermeyen taşıyıcıların virüsü yaydığı, bu yüzden taramaların etkisiz kaldığı belirtilmiştir. B seçeneği doğrudur.",
+        "trapType": "Cause-Effect Confusion"
+      },
+      {
+        "id": "p12-q2",
+        "prompt": "According to the text, controlling pathogens with high asymptomatic transmission requires:",
+        "options": [
+          "A) Waiting for patients to report high fever before initiating isolation.",
+          "B) Proactive surveillance, random diagnostic testing, and universal masking.",
+          "C) The immediate ban of all somatic gene editing research.",
+          "D) Increasing dietary added sugar to boost natural body lipids.",
+          "E) Completely stopping all clinical consultations and hospital operations."
+        ],
+        "correctAnswer": "B",
+        "primaryDistractor": "A",
+        "explanation": "Metinde 'controlling such pathogens requires proactive surveillance, random diagnostic testing, and universal masking...' denilmektedir. B seçeneği bunu tam karşılar. A seçeneği ise etkisiz 'reactive' yöntemi temsil eder (Reversal).",
+        "trapType": "Reversal"
+      },
+      {
+        "id": "p12-q3",
+        "prompt": "The author implies that carriers of asymptomatic viruses:",
+        "options": [
+          "A) Unknowingly spread the disease because they feel healthy and maintain social routines.",
+          "B) Are fully aware of their illness and intentionally attempt to contaminate nursing homes.",
+          "C) Have lower blood osmolality levels that prevent them from releasing dopamine.",
+          "D) Can only replicate the pathogen if they undergo chronic stress.",
+          "E) Are immune to all future bacterial infections because of plasmid transfers."
+        ],
+        "correctAnswer": "A",
+        "primaryDistractor": "B",
+        "explanation": "Metinde 'Because these carriers feel perfectly healthy, they continue their daily routines, interacting socially and unknowingly seeding viral clusters' denilmiştir. Dolayısıyla A doğrudur. B seçeneği ise yersiz bir suçlamadır (Tone Misread).",
+        "trapType": "Tone Misread"
+      }
+    ],
+    "vocabulary": [
+      {
+        "word": "asymptomatic",
+        "partOfSpeech": "Adjective",
+        "meaning": "belirti göstermeyen, sessiz seyreden",
+        "synonym": "without symptoms, silent",
+        "example": "Asymptomatic transmission is a challenge."
+      },
+      {
+        "word": "dissemination",
+        "partOfSpeech": "Noun",
+        "meaning": "yayılma, saçılma, bulaşma",
+        "synonym": "spread, scattering",
+        "example": "This silent dissemination is dangerous."
+      },
+      {
+        "word": "surveillance",
+        "partOfSpeech": "Noun",
+        "meaning": "gözetim, yakın takip, izleme",
+        "synonym": "monitoring, close observation",
+        "example": "requires proactive surveillance"
+      }
+    ],
+    "masterTechnique": "Sebep-sonuç bağlaçlarını (because, rendering... ineffective) bulup neden-sonuç zincirini doğru kurun. ÖSYM, bir sonucun nedenini bambaşka bir gelişmeye bağlayarak çeldirici üretir.",
+    "sentenceAutopsy": {
+      "sentence": "Without these measures, a virus with high asymptomatic shedding can easily bypass traditional quarantine walls, transforming a localized outbreak into a global pandemic.",
+      "focus": [
+        "Without these measures (Şart belirten olumsuz yapı)",
+        "can easily bypass (Olasılık ve kolaylık derecesi)",
+        "transforming ... into (Sonuç bildiren aktif kısaltma yapısı)"
+      ]
+    },
+    "isPlaceholder": false
+  },
+  {
+    "id": "p13",
+    "title": "Neuroplasticity: The Malleable Brain",
+    "level": "Advanced",
+    "timeLimitMinutes": 10,
+    "strategy": "Track structural remodeling mechanisms triggered by environmental stimuli.",
+    "passageText": "For over a century, neuroscientists believed that the adult human brain was a static organ, structurally fixed after developmental maturation. This anatomical paradigm has been shattered by the discovery of neuroplasticity—the brain's lifelong capacity to reorganize its neural circuitry in response to learning, sensory experiences, or trauma. At the cellular level, neuroplasticity is driven by synaptic pruning and long-term potentiation (LTP). Synapses that are frequently activated are reinforced with additional neurotransmitter receptors and structural proteins, strengthening their signaling efficiency. Conversely, neglected pathways undergo synaptic pruning, where unused connections are systematically eliminated. This dynamic remodeling allows the brain to adapt to environmental demands and recover from physical injuries, such as stroke. However, neuroplasticity is a double-edged sword; negative repetitive experiences, such as chronic stress or addiction, can also rewire neural pathways in ways that reinforce maladaptive behaviors.",
+    "questions": [
+      {
+        "id": "p13-q1",
+        "prompt": "According to the passage, the cellular mechanism of long-term potentiation (LTP) involves which of the following?",
+        "options": [
+          "A) The systematic elimination of unused neural connections across the entire brain.",
+          "B) Strengthening frequently activated synapses by adding receptors and structural proteins.",
+          "C) Preventing the prefrontal cortex from regulating metabolic pathways.",
+          "D) Decreasing the overall volume of dopamine released into the spinal cord.",
+          "E) Replacing eukaryotic genomes with artificial RNA guide sequences."
+        ],
+        "correctAnswer": "B",
+        "primaryDistractor": "A",
+        "explanation": "Metinde LTP'nin 'frequently activated' olan sinapsları ilave reseptör ve proteinlerle güçlendirdiği ('reinforced with additional... receptors') belirtilmiştir. A seçeneği ise budama (synaptic pruning) mekanizmasıdır (Detail vs Detail).",
+        "trapType": "Detail vs Detail"
+      },
+      {
+        "id": "p13-q2",
+        "prompt": "The description of neuroplasticity as a 'double-edged sword' implies that:",
+        "options": [
+          "A) It is a highly dangerous condition that always leads to cognitive decline.",
+          "B) The brain's ability to reorganize can reinforce both beneficial learning and negative maladaptive habits.",
+          "C) It only occurs in infants and completely disappears after developmental maturation.",
+          "D) It can only be activated by surgical intervention in the prefrontal cortex.",
+          "E) It prevents biological organisms from detecting any solar illumination.",
+          "F) It makes the brain completely immune to the effects of chronic stress."
+        ],
+        "options_fixed": [
+          "A) It is a highly dangerous condition that always leads to cognitive decline.",
+          "B) The brain's ability to reorganize can reinforce both beneficial learning and negative maladaptive habits.",
+          "C) It only occurs in infants and completely disappears after developmental maturation.",
+          "D) It can only be activated by surgical intervention in the prefrontal cortex.",
+          "E) It prevents biological organisms from detecting any solar illumination."
+        ],
+        "options": [
+          "A) It is a highly dangerous condition that always leads to cognitive decline.",
+          "B) The brain's ability to reorganize can reinforce both beneficial learning and negative maladaptive habits.",
+          "C) It only occurs in infants and completely disappears after developmental maturation.",
+          "D) It can only be activated by surgical intervention in the prefrontal cortex.",
+          "E) It prevents biological organisms from detecting any solar illumination."
+        ],
+        "correctAnswer": "B",
+        "primaryDistractor": "A",
+        "explanation": "Nöroplastisitenin çift ucu keskin bıçak ('double-edged sword') olması, hem yararlı öğrenmeleri hem de stres/bağımlılık gibi uyumsuz davranışları ('reinforce maladaptive behaviors') pekiştirebilmesindendir. B doğrudur.",
+        "trapType": "Extreme Words"
+      },
+      {
+        "id": "p13-q3",
+        "prompt": "Historically, neuroscientists held which mistaken view about the human brain?",
+        "options": [
+          "A) They assumed the brain was made entirely of cardiac muscle cells.",
+          "B) They believed the adult human brain was structurally static and fixed after maturation.",
+          "C) They believed the brain could only replicate genes via plasmids.",
+          "D) They estimated that water requirements were exactly 8 glasses daily.",
+          "E) They claimed that the prefrontal cortex did not exist in adults."
+        ],
+        "correctAnswer": "B",
+        "primaryDistractor": "E",
+        "explanation": "Paragrafın ilk cümlesinde 'For over a century, neuroscientists believed that the adult human brain was a static organ, structurally fixed...' denilmiştir. Bu tarihi yanlış inanç B şıkkında belirtilmiştir.",
+        "trapType": "Reversal"
+      }
+    ],
+    "vocabulary": [
+      {
+        "word": "malleable",
+        "partOfSpeech": "Adjective",
+        "meaning": "şekillendirilebilir, bükülebilir, esnek",
+        "synonym": "pliable, flexible, adaptable",
+        "example": "The malleable brain adapts to trauma."
+      },
+      {
+        "word": "pruning",
+        "partOfSpeech": "Noun",
+        "meaning": "budama, ayıklama, eksiltme",
+        "synonym": "trimming, weeding out",
+        "example": "pathways undergo synaptic pruning"
+      },
+      {
+        "word": "maladaptive",
+        "partOfSpeech": "Adjective",
+        "meaning": "uyumsuz, zararlı, alışkanlık yapıcı olumsuz",
+        "synonym": "unhelpful, dysfunctional",
+        "example": "reinforce maladaptive behaviors"
+      }
+    ],
+    "masterTechnique": "İki zıt kavramın (LTP vs Pruning / Strengthening vs Eliminating) eşleştiği yerleri not edin. ÖSYM bu kavramların tanımlarını şıklarda çaprazlayarak kafa karıştırır.",
+    "sentenceAutopsy": {
+      "sentence": "Synapses that are frequently activated are reinforced with additional receptors, whereas neglected pathways undergo synaptic pruning.",
+      "focus": [
+        "Synapses that are ... (Tanımlayıcı ilgi cümleciği)",
+        "whereas (Zıtlık ve kıyaslama bağlacı)",
+        "undergo (Bir sürece/eyleme maruz kalmak)"
+      ]
+    },
+    "isPlaceholder": false
+  },
+  {
+    "id": "p14",
+    "title": "Healthcare Inequality: The Social Determinants",
+    "level": "Advanced",
+    "timeLimitMinutes": 10,
+    "strategy": "Analyze how socioeconomic status translates into molecular and cardiorespiratory health deficits.",
+    "passageText": "Epidemiological research reveals that clinical outcomes are shaped far more by social determinants—such as socioeconomic status, zip code, and environmental exposures—than by biological variations or access to high-tech medical care. Chronic stress induced by social inequality triggers chronic cortisol spikes and elevated sympathetic nervous system activity. This sustained physiological state causes systemic vascular wear, endothelial dysfunction, and immune suppression, ultimately translating social deprivation into molecular and cardiorespiratory health deficits. For instance, individuals residing in low-income neighborhoods often have limited access to fresh, nutrient-dense foods, forcing reliance on hyper-palatability processed foods high in added sugar. This dietary restriction, coupled with the absence of green spaces for physical activity, explains the high incidence of type 2 diabetes and hypertension in these populations. Thus, health inequality is not merely a political debate; it is a physical, biological reality inscribed on the human body.",
+    "questions": [
+      {
+        "id": "p14-q1",
+        "prompt": "What is the primary physiological pathway through which social inequality translates into cardiovascular health deficits?",
+        "options": [
+          "A) By directly mutating the genetic code of somatic cells during infancy.",
+          "B) By inducing chronic stress that triggers cortisol spikes, vascular wear, and endothelial dysfunction.",
+          "C) By completely halting the production of endogenous opioids in the spinal cord.",
+          "D) By forcing the brain to perceive midday as midnight to block sleep.",
+          "E) By stimulating osteoblast cells to trigger bone density erosion."
+        ],
+        "correctAnswer": "B",
+        "primaryDistractor": "A",
+        "explanation": "Metinde 'Chronic stress... triggers chronic cortisol spikes... causes systemic vascular wear, endothelial dysfunction' ifadeleri B seçeneğini doğrular. Genlerin mutasyona uğraması gibi bir mekanizma belirtilmemiştir.",
+        "trapType": "Detail vs Main Idea"
+      },
+      {
+        "id": "p14-q2",
+        "prompt": "The passage implies that high rates of chronic diseases in low-income neighborhoods are exacerbated by which environmental factors?",
+        "options": [
+          "A) Excess exposure to high-energy visible LED blue light spectrums.",
+          "B) Limited access to fresh, nutrient-dense foods and green spaces for physical activity.",
+          "C) Over-reliance on virtual consultations and telemedicine triaging.",
+          "D) Random genetic edits that permanently disable insulin synthesis.",
+          "E) An overproduction of melatonin by the pineal gland."
+        ],
+        "correctAnswer": "B",
+        "primaryDistractor": "D",
+        "explanation": "Metinde 'limited access to fresh, nutrient-dense foods... coupled with the absence of green spaces' durumunun diyabet ve hipertansiyon sıklığını açıkladığı belirtilmiştir. B seçeneği doğrudur.",
+        "trapType": "Extreme Words"
+      },
+      {
+        "id": "p14-q3",
+        "prompt": "According to the text, what has a greater impact on clinical outcomes than advanced medical technologies?",
+        "options": [
+          "A) High-intensity interval fitness trends.",
+          "B) Social determinants like socioeconomic status, zip code, and environmental exposures.",
+          "C) Arbitrary numerical formulas regarding hydration.",
+          "D) Horizontal gene transfers via bacterial plasmids.",
+          "E) The complete eradication of all public health screening methods."
+        ],
+        "correctAnswer": "B",
+        "primaryDistractor": "A",
+        "explanation": "Metnin ilk cümlesinde 'clinical outcomes are shaped far more by social determinants... than by... access to high-tech medical care' denilerek B seçeneği doğrudan kanıtlanmıştır.",
+        "trapType": "Reversal"
+      }
+    ],
+    "vocabulary": [
+      {
+        "word": "determinant",
+        "partOfSpeech": "Noun",
+        "meaning": "belirleyici faktör",
+        "synonym": "factor, driver",
+        "example": "social determinants of health"
+      },
+      {
+        "word": "deprivation",
+        "partOfSpeech": "Noun",
+        "meaning": "yoksunluk, mahrumiyet, sefalet",
+        "synonym": "poverty, lack",
+        "example": "translating social deprivation into health deficits"
+      },
+      {
+        "word": "inscribe",
+        "partOfSpeech": "Verb",
+        "meaning": "kazımak, bedenine/ruhuna işlemek",
+        "synonym": "engrave, write",
+        "example": "biological reality inscribed on the body"
+      }
+    ],
+    "masterTechnique": "'Not merely ... it is ...' kalıbının geçtiği yerleri yazarın asıl ana fikri vurguladığı yer olarak işaretleyin. Burası mutlaka soru olarak geri döner.",
+    "sentenceAutopsy": {
+      "sentence": "Thus, health inequality is not merely a political debate; it is a physical, biological reality inscribed on the human body.",
+      "focus": [
+        "Thus (Sonuç bildiren zarf)",
+        "not merely A; it is B (Yalnızca A değil, asıl B'dir vurgusu)",
+        "inscribed on (Niteleyici edilgen kısaltma)"
+      ]
+    },
+    "isPlaceholder": false
+  },
+  {
+    "id": "p15",
+    "title": "The Quest for Longevity: Curing Aging?",
+    "level": "Advanced",
+    "timeLimitMinutes": 10,
+    "strategy": "Examine cellular aging mechanisms: telomere attrition, cellular senescence, and longevity genes.",
+    "passageText": "Modern biotechnology has shifted its lens from merely treating age-related diseases to targeting the biology of aging itself as a treatable disease. Cellular longevity strategies focus on maintaining telomere lengths, eliminating senescent cells that pollute healthy tissues, and activating sirtuins—enzymes that modulate DNA repair and metabolic resilience. Telomeres are protective caps at the ends of chromosomes that shorten with each cell division. When they reach a critically short length, cells enter a state of permanent arrest known as cellular senescence, secreting pro-inflammatory factors that damage surrounding tissues. By utilizing telomerase activators and senolytic drugs that selectively destroy these destructive cells, researchers have successfully extended the healthy lifespan of model organisms. However, translating these therapies to humans remains a complex challenge, as artificial telomere extension carries the biological risk of oncogenic transformation, since cancer cells rely on telomerase to achieve replicative immortality.",
+    "questions": [
+      {
+        "id": "p15-q1",
+        "prompt": "According to the passage, what is the dual nature (benefit vs. risk) of artificial telomere extension?",
+        "options": [
+          "A) It enhances bone mineral density but completely stops melatonin synthesis.",
+          "B) It can extend cellular lifespan but carries the serious biological risk of oncogenic transformation.",
+          "C) It cures type 2 diabetes instantly but causes chronic physical fatigue.",
+          "D) It allows horizontal gene transfer but makes antibiotics completely ineffective.",
+          "E) It increases visual video triaging but prevents any physical palpation."
+        ],
+        "correctAnswer": "B",
+        "primaryDistractor": "C",
+        "explanation": "Metnin son cümlesinde 'artificial telomere extension carries the biological risk of oncogenic transformation, since cancer cells rely on telomerase...' denilmiştir. B seçeneği bunu mükemmel şekilde özetler.",
+        "trapType": "Detail vs Detail"
+      },
+      {
+        "id": "p15-q2",
+        "prompt": "What are sirtuins and why are they targeted in modern longevity research?",
+        "options": [
+          "A) They are pro-inflammatory factors that actively pollute surrounding tissues.",
+          "B) They are enzymes that modulate DNA repair and enhance metabolic resilience.",
+          "C) They are non-living infectious agents consisting of a nucleic acid core.",
+          "D) They are cells that trigger irreversible vascular degradation under stress.",
+          "E) They are diagnostic devices used to detect physical abdominal tenderness."
+        ],
+        "correctAnswer": "B",
+        "primaryDistractor": "A",
+        "explanation": "Metinde sirtuinlerin tanımı 'enzymes that modulate DNA repair and metabolic resilience' olarak verilmiştir. B seçeneği doğrudur. A seçeneği yaşlanan hücrelerin salgısıdır (Reversal).",
+        "trapType": "Reversal"
+      },
+      {
+        "id": "p15-q3",
+        "prompt": "What occurs biologically when chromosome telomeres become critically short?",
+        "options": [
+          "A) Cells begin to divide at an accelerated rate, curing all inflammatory conditions.",
+          "B) Cells enter a state of permanent arrest called cellular senescence, secreting pro-inflammatory factors.",
+          "C) They trigger the prefrontal cortex to release massive endorphin spikes.",
+          "D) They are converted horizontally into multi-drug resistant bacterial plasmids.",
+          "E) They cause the hypothalamus to trigger extreme thirst."
+        ],
+        "correctAnswer": "B",
+        "primaryDistractor": "A",
+        "explanation": "Metinde 'When they reach a critically short length, cells enter a state of permanent arrest known as cellular senescence, secreting pro-inflammatory factors...' denilerek B seçeneği kanıtlanmıştır.",
+        "trapType": "Reversal"
+      }
+    ],
+    "vocabulary": [
+      {
+        "word": "attrition",
+        "partOfSpeech": "Noun",
+        "meaning": "yıpranma, aşınma, eksilme",
+        "synonym": "wearing down, erosion",
+        "example": "telomere attrition limits cell life"
+      },
+      {
+        "word": "senescent",
+        "partOfSpeech": "Adjective",
+        "meaning": "yaşlanan, bölünmesi durmuş",
+        "synonym": "aging, non-dividing",
+        "example": "eliminating senescent cells"
+      },
+      {
+        "word": "oncogenic",
+        "partOfSpeech": "Adjective",
+        "meaning": "tümör yapıcı, kanserojen",
+        "synonym": "cancer-causing, tumorigenic",
+        "example": "risk of oncogenic transformation"
+      }
+    ],
+    "masterTechnique": "Biyoteknolojik veya tıbbi gelişmelerin yan etkilerine (risk of oncogenic transformation) çok dikkat edin. ÖSYM, bir tedaviyi 'tamamen risksiz ve kusursuz' sunan şıkları Extreme Words tuzağı ile eler.",
+    "sentenceAutopsy": {
+      "sentence": "However, translating these therapies to humans remains a complex challenge, as artificial telomere extension carries the biological risk of oncogenic transformation.",
+      "focus": [
+        "However (Zıtlık bağlacı)",
+        "translating ... to humans (Uygulama/transfer)",
+        "remains a challenge (Durum bildiren kalıp)",
+        "as (Sebep bildiren 'çünkü' anlamındaki bağlaç)"
+      ]
+    },
+    "isPlaceholder": false
+  }
+]
